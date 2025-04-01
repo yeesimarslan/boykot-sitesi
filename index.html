@@ -146,9 +146,9 @@
       <div id="sonuc"></div>
     </div>
 
-    <!-- Marka Öner -->
+    <!-- Boykot Marka Öner -->
     <div class="container">
-      <h2>Marka Öner</h2>
+      <h2>Boykot Marka Öner</h2>
       <input type="text" id="onerilenMarka" placeholder="Önerilecek marka...">
       <button onclick="markaOner()">Marka Öner</button>
       <div id="onayMesaji" class="onay"></div>
@@ -188,4 +188,89 @@
         const response = await fetch("boykot.json");
         const data = await response.json();
 
-        const bulundu = data.boykotListesi.find(item =>
+        const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
+
+        if (bulundu && bulundu.boykot === true) {
+          sonucDiv.textContent = "❌ Bu marka boykot ediliyor.";
+          sonucDiv.className = "boykot";
+        } else {
+          sonucDiv.textContent = "✅ Bu marka şu anda boykot edilmiyor.";
+          sonucDiv.className = "temiz";
+        }
+
+        sonucDiv.style.display = "block";
+      } catch (e) {
+        sonucDiv.textContent = "Veri yüklenemedi.";
+        sonucDiv.className = "boykot";
+        sonucDiv.style.display = "block";
+      }
+    }
+
+    async function markaOner() {
+      const marka = document.getElementById("onerilenMarka").value.trim();
+      const mesaj = document.getElementById("onayMesaji");
+
+      if (marka === "") {
+        mesaj.textContent = "Lütfen bir marka adı girin.";
+        mesaj.style.display = "block";
+        return;
+      }
+
+      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "marka=" + encodeURIComponent(marka)
+      });
+
+      mesaj.textContent = "✔️ Marka öneriniz alındı.";
+      mesaj.style.display = "block";
+      document.getElementById("onerilenMarka").value = "";
+    }
+
+    async function gorusGonder() {
+      const metin = document.getElementById("gorusMetni").value.trim();
+      const mesaj = document.getElementById("gorusMesaji");
+
+      if (metin === "") {
+        mesaj.textContent = "Lütfen bir görüş yazın.";
+        mesaj.style.display = "block";
+        return;
+      }
+
+      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "gorus=" + encodeURIComponent(metin)
+      });
+
+      mesaj.textContent = "✔️ Görüşünüz alındı, teşekkür ederiz!";
+      mesaj.style.display = "block";
+      document.getElementById("gorusMetni").value = "";
+    }
+
+    async function alternatifOner() {
+      const boykot = document.getElementById("boykotMarka").value.trim();
+      const alternatif = document.getElementById("alternatifMarka").value.trim();
+      const mesaj = document.getElementById("alternatifMesaji");
+
+      if (!boykot || !alternatif) {
+        mesaj.textContent = "Lütfen her iki alanı da doldurun.";
+        mesaj.style.display = "block";
+        return;
+      }
+
+      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `boykotMarka=${encodeURIComponent(boykot)}&alternatifMarka=${encodeURIComponent(alternatif)}`
+      });
+
+      mesaj.textContent = "✔️ Alternatif marka öneriniz kaydedildi.";
+      mesaj.style.display = "block";
+      document.getElementById("boykotMarka").value = "";
+      document.getElementById("alternatifMarka").value = "";
+    }
+  </script>
+
+</body>
+</html>
