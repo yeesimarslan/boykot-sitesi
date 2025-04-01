@@ -152,13 +152,11 @@
   </style>
 </head>
 <body>
-
   <h1>#BoykotListesi</h1>
   <p>Hangi markalar artık yok?</p>
   <a href="liste.html" class="button-link">📋 Tüm Boykotlu Markaları Gör</a>
 
   <div class="grid-container">
-    <!-- Sorgulama -->
     <div class="container">
       <h2>Boykot Sorgulama</h2>
       <input type="text" id="markaAdi" placeholder="Marka adını yazın...">
@@ -166,7 +164,6 @@
       <div id="sonuc"></div>
     </div>
 
-    <!-- Boykot Marka Öner -->
     <div class="container">
       <h2>Boykot Marka Öner</h2>
       <input type="text" id="onerilenMarka" placeholder="Önerilecek marka...">
@@ -174,7 +171,6 @@
       <div id="onayMesaji" class="onay"></div>
     </div>
 
-    <!-- Görüş Paylaş -->
     <div class="container">
       <h2>Görüşünü Paylaş</h2>
       <textarea id="gorusMetni" placeholder="Bu site hakkında düşünceniz veya öneriniz..." rows="4"></textarea>
@@ -182,7 +178,6 @@
       <div id="gorusMesaji" class="onay"></div>
     </div>
 
-    <!-- Alternatif Öner -->
     <div class="container">
       <h2>Alternatif Marka Öner!</h2>
       <input type="text" id="boykotMarka" placeholder="Boykot edilen marka">
@@ -192,7 +187,6 @@
     </div>
   </div>
 
-  <!-- Alternatif Öneriler Kutusu -->
   <div class="alt-kutu">
     <h3>📦 Son Alternatif Öneriler</h3>
     <ul id="alternatifKutuListe">
@@ -256,7 +250,8 @@
         localStorage.setItem("alternatifMarkalar", JSON.stringify(data));
         liste.innerHTML = "";
 
-        data.slice(0, 5).forEach(([boykotMarka, alternatifMarka]) => {
+        data.slice(0, 5).forEach((satir) => {
+          const [boykotMarka, alternatifMarka] = satir;
           if (boykotMarka && alternatifMarka) {
             liste.innerHTML += `<li>❌ ${boykotMarka.trim()} → ✅ ${alternatifMarka.trim()}</li>`;
           }
