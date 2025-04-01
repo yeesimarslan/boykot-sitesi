@@ -11,6 +11,291 @@
       "kategori": "Fast Food"
     },
     {
+      "marka": "Nestle",
+      "boykot": true,
+      "kategori": "Gıda"
+    },
+    {
+      "marka": "Pepsi",
+      "boykot": true,
+      "kategori": "İçecek"
+    },
+    {
+      "marka": "Coca-Cola",
+      "boykot": true,
+      "kategori": "İçecek"
+    },
+    {
+      "marka": "TRT",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "CNN Türk",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "A Haber",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Beyaz TV",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "NTV",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Star TV",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Kral FM",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Türkiye Gazetesi",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Akşam Gazetesi",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Yeni Şafak",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Doğuş Grubu",
+      "boykot": true,
+      "kategori": "Şirket"
+    },
+    {
+      "marka": "Demirören Medya",
+      "boykot": true,
+      "kategori": "Şirket"
+    },
+    {
+      "marka": "Turkuvaz Medya",
+      "boykot": true,
+      "kategori": "Şirket"
+    },
+    {
+      "marka": "Espressolab",
+      "boykot": true,
+      "kategori": "Kafe"
+    },
+    {
+      "marka": "D&R",
+      "boykot": true,
+      "kategori": "Perakende"
+    },
+    {
+      "marka": "İdefix",
+      "boykot": true,
+      "kategori": "Perakende"
+    },
+    {
+      "marka": "Demirören AVM",
+      "boykot": true,
+      "kategori": "Alışveriş"
+    },
+    {
+      "marka": "Kilim Mobilya",
+      "boykot": true,
+      "kategori": "Mobilya"
+    },
+    {
+      "marka": "Ülker",
+      "boykot": true,
+      "kategori": "Gıda"
+    },
+    {
+      "marka": "İhlas Ev Aletleri",
+      "boykot": true,
+      "kategori": "Elektronik"
+    },
+    {
+      "marka": "Turkuaz Yayınevi",
+      "boykot": true,
+      "kategori": "Yayınevi"
+    },
+    {
+      "marka": "Milli Piyango",
+      "boykot": true,
+      "kategori": "Şans Oyunu"
+    },
+    {
+      "marka": "misli.com",
+      "boykot": true,
+      "kategori": "Şans Oyunu"
+    },
+    {
+      "marka": "iddaa.com",
+      "boykot": true,
+      "kategori": "Şans Oyunu"
+    },
+    {
+      "marka": "ETS Tur",
+      "boykot": true,
+      "kategori": "Turizm"
+    },
+    {
+      "marka": "Doğan Haber Ajansı",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "İhlas Haber Ajansı",
+      "boykot": true,
+      "kategori": "Medya"
+    },
+    {
+      "marka": "Volkswagen",
+      "boykot": true,
+      "kategori": "Otomotiv"
+    },
+    {
+      "marka": "Nusr-Et",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Günaydın Restoran",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Zuma",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Da Mario",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "29",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Rüya",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "The Populist",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Lacivert",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Masa",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "COYA",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Vogue",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Gina",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Fenix",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Kiva",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Mezzaluna",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Kebapçı Etiler",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Saltbae",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Çubuklu 29",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Oblix",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "ROKA",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Sait",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Papaioannou",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Bar Des Pres",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Amazónico",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Frankie",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
+      "marka": "Gattopardo",
+      "boykot": true,
+      "kategori": "Restoran"
+    },
+    {
       "marka": "LC Waikiki",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
