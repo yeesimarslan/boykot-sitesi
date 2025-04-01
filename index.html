@@ -57,7 +57,7 @@
       text-align: center;
     }
 
-    input {
+    input, textarea {
       padding: 14px;
       font-size: 16px;
       width: 100%;
@@ -68,7 +68,7 @@
       color: var(--text-color);
     }
 
-    input::placeholder {
+    input::placeholder, textarea::placeholder {
       color: #ccc;
     }
 
@@ -88,7 +88,7 @@
       background-color: #3fa744;
     }
 
-    #sonuc, #onayMesaji {
+    #sonuc, #onayMesaji, #gorusMesaji {
       margin-top: 20px;
       font-size: 16px;
       font-weight: 500;
@@ -163,6 +163,14 @@
     <ul id="onerilerListesi"></ul>
   </div>
 
+  <!-- 💬 Kullanıcı Görüşü -->
+  <div class="container">
+    <h2>Görüşünü Paylaş</h2>
+    <textarea id="gorusMetni" placeholder="Bu site hakkında düşünceniz veya öneriniz..." rows="4"></textarea>
+    <button onclick="gorusGonder()">Görüş Gönder</button>
+    <div id="gorusMesaji" class="onay"></div>
+  </div>
+
   <script>
     async function sorgula() {
       const girilen = document.getElementById("markaAdi").value.trim().toLowerCase();
@@ -217,7 +225,6 @@
       mesaj.style.display = "block";
       giris.value = "";
 
-      // Google Sheets'e gönder
       await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
         method: "POST",
         headers: {
@@ -225,6 +232,29 @@
         },
         body: "marka=" + encodeURIComponent(marka)
       });
+    }
+
+    async function gorusGonder() {
+      const metin = document.getElementById("gorusMetni").value.trim();
+      const mesaj = document.getElementById("gorusMesaji");
+
+      if (metin === "") {
+        mesaj.textContent = "Lütfen bir görüş yazın.";
+        mesaj.style.display = "block";
+        return;
+      }
+
+      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "gorus=" + encodeURIComponent(metin)
+      });
+
+      mesaj.textContent = "✔️ Görüşünüz alındı, teşekkür ederiz!";
+      mesaj.style.display = "block";
+      document.getElementById("gorusMetni").value = "";
     }
   </script>
 
