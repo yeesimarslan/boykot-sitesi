@@ -1,6 +1,31 @@
 {
   "boykotListesi": [
     {
+      "marka": "Starbucks",
+      "boykot": true,
+      "kategori": "İçecek"
+    },
+    {
+      "marka": "McDonald's",
+      "boykot": true,
+      "kategori": "Fast Food"
+    },
+    {
+      "marka": "Nestle",
+      "boykot": true,
+      "kategori": "Gıda"
+    },
+    {
+      "marka": "Coca-Cola",
+      "boykot": true,
+      "kategori": "İçecek"
+    },
+    {
+      "marka": "Pepsi",
+      "boykot": true,
+      "kategori": "İçecek"
+    },
+    {
       "marka": "TRT",
       "boykot": true,
       "kategori": "Medya"
