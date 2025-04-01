@@ -5,304 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>#BoykotListesi</title>
   <style>
-    :root {
-      --bg-dark: #1e1e1e;
-      --card-bg: #2c2c2c;
-      --text-color: #f1f1f1;
-      --accent: #4caf50;
-      --danger: #ff5252;
-      --muted: #aaa;
-    }
-
-    * {
-      box-sizing: border-box;
-      transition: all 0.3s ease;
-    }
-
     body {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 20px;
-      min-height: 100vh;
+      padding: 20px;
     }
-
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: var(--accent);
-      text-align: center;
+    h1, h2 {
+      color: #4caf50;
     }
-
-    p {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .grid-container {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-bottom: 40px;
+    }
+    .card {
+      background-color: #2c2c2c;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    input, textarea, button {
       width: 100%;
-      max-width: 900px;
-    }
-
-    .container {
-      background-color: var(--card-bg);
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      text-align: center;
-    }
-
-    input, textarea {
-      padding: 14px;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       font-size: 16px;
-      width: 100%;
-      margin-bottom: 15px;
       border: none;
-      border-radius: 10px;
-      background-color: #444;
-      color: var(--text-color);
+      border-radius: 8px;
     }
-
-    input::placeholder, textarea::placeholder {
-      color: #ccc;
-    }
-
     button {
-      padding: 14px;
-      background-color: var(--accent);
+      background-color: #4caf50;
       color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      width: 100%;
     }
-
-    button:hover {
-      background-color: #3fa744;
+    #sonuc, #gorusMesaji, #onayMesaji, #alternatifMesaji {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 8px;
     }
-
-    #sonuc, #onayMesaji, #gorusMesaji, #alternatifMesaji {
-      margin-top: 15px;
-      font-size: 15px;
-      font-weight: 500;
-      padding: 12px;
-      border-radius: 12px;
-      display: none;
-    }
-
-    .boykot {
-      background-color: #3b1f1f;
-      color: var(--danger);
-    }
-
-    .temiz {
-      background-color: #1f3b2c;
-      color: var(--accent);
-    }
-
-    .onay {
-      background-color: #1e2a3b;
-      color: #4aa3ff;
-    }
-
     .alt-kutu {
-      margin-top: 50px;
-      width: 100%;
-      max-width: 700px;
       background-color: #2c2c2c;
-      border-radius: 16px;
       padding: 20px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-      text-align: center;
-    }
-
-    .alt-kutu h3 {
-      color: var(--accent);
-      margin-bottom: 15px;
-    }
-
-    .alt-kutu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 15px 0;
-    }
-
-    .alt-kutu ul li {
-      margin-bottom: 10px;
-      font-size: 15px;
-    }
-
-    .alt-kutu a {
-      text-decoration: underline;
-      color: #4aa3ff;
-      font-weight: bold;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
   <h1>#BoykotListesi</h1>
-  <p>Hangi markalar artık yok?</p>
-  <a href="liste.html" class="button-link">📋 Tüm Boykotlu Markaları Gör</a>
 
-  <div class="grid-container">
-    <div class="container">
-      <h2>Boykot Sorgulama</h2>
-      <input type="text" id="markaAdi" placeholder="Marka adını yazın...">
+  <div class="grid">
+    <div class="card">
+      <h2>Marka Sorgula</h2>
+      <input type="text" id="markaAdi" placeholder="Marka adını yazın">
       <button onclick="sorgula()">Sorgula</button>
       <div id="sonuc"></div>
     </div>
 
-    <div class="container">
+    <div class="card">
       <h2>Boykot Marka Öner</h2>
-      <input type="text" id="onerilenMarka" placeholder="Önerilecek marka...">
+      <input type="text" id="onerilenMarka" placeholder="Marka adı">
       <button onclick="markaOner()">Marka Öner</button>
-      <div id="onayMesaji" class="onay"></div>
+      <div id="onayMesaji"></div>
     </div>
 
-    <div class="container">
+    <div class="card">
       <h2>Görüşünü Paylaş</h2>
-      <textarea id="gorusMetni" placeholder="Bu site hakkında düşünceniz veya öneriniz..." rows="4"></textarea>
-      <button onclick="gorusGonder()">Görüş Gönder</button>
-      <div id="gorusMesaji" class="onay"></div>
+      <textarea id="gorusMetni" placeholder="Bu site hakkında görüşünüz..."></textarea>
+      <button onclick="gorusGonder()">Gönder</button>
+      <div id="gorusMesaji"></div>
     </div>
 
-    <div class="container">
-      <h2>Alternatif Marka Öner!</h2>
+    <div class="card">
+      <h2>Alternatif Marka Öner</h2>
       <input type="text" id="boykotMarka" placeholder="Boykot edilen marka">
-      <input type="text" id="alternatifMarka" placeholder="Önerdiğiniz alternatif marka">
+      <input type="text" id="alternatifMarka" placeholder="Önerdiğiniz alternatif">
       <button onclick="alternatifOner()">Alternatif Öner</button>
-      <div id="alternatifMesaji" class="onay"></div>
+      <div id="alternatifMesaji"></div>
     </div>
   </div>
 
   <div class="alt-kutu">
-    <h3>📦 Son Alternatif Öneriler</h3>
-    <ul id="alternatifKutuListe">
-      <li>Yükleniyor...</li>
-    </ul>
-    <a href="alternatifler.html">➕ Tümünü Göster</a>
+    <h2>📦 Son Alternatif Öneriler</h2>
+    <ul id="alternatifKutuListe"><li>Yükleniyor...</li></ul>
   </div>
 
   <script>
+    let alternatifler = [];
+
+    async function alternatifleriYukle() {
+      try {
+        const response = await fetch("alternatifler.json");
+        const data = await response.json();
+        alternatifler = data.alternatifler;
+
+        const liste = document.getElementById("alternatifKutuListe");
+        liste.innerHTML = "";
+        const ilkBes = alternatifler.slice(0, 5);
+        ilkBes.forEach(item => {
+          liste.innerHTML += `<li>❌ ${item.boykotMarka} → ✅ ${item.alternatifMarka}</li>`;
+        });
+      } catch (e) {
+        console.error("Alternatifler yüklenemedi", e);
+      }
+    }
+
     async function sorgula() {
       const girilen = document.getElementById("markaAdi").value.trim().toLowerCase();
       const sonucDiv = document.getElementById("sonuc");
-
-      if (girilen === "") {
-        sonucDiv.textContent = "Lütfen bir marka adı girin.";
-        sonucDiv.className = "";
-        sonucDiv.style.display = "block";
-        return;
-      }
+      sonucDiv.innerHTML = "";
 
       try {
         const response = await fetch("boykot.json");
         const data = await response.json();
-
         const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
 
         if (bulundu && bulundu.boykot === true) {
           sonucDiv.innerHTML = "❌ Bu marka boykot ediliyor.";
-          sonucDiv.className = "boykot";
         } else {
           sonucDiv.innerHTML = "✅ Bu marka şu anda boykot edilmiyor.";
-          sonucDiv.className = "temiz";
         }
 
-        const alternatifler = JSON.parse(localStorage.getItem("alternatifMarkalar") || "[]");
-        const alternatif = alternatifler.find(([boykotMarka]) => boykotMarka.toLowerCase().trim() === girilen);
-        if (alternatif) {
-          sonucDiv.innerHTML += `<br><br><span style='color:#4aa3ff'>Alternatif olarak: <strong>${alternatif[1]}</strong></span>`;
+        const eslesenler = alternatifler.filter(item => item.boykotMarka.toLowerCase().trim() === girilen);
+        if (eslesenler.length > 0) {
+          const alternatifYazisi = eslesenler.map(item => `<strong>${item.alternatifMarka.trim()}</strong>`).join(", ");
+          sonucDiv.innerHTML += `<br><br><span style='color:#4aa3ff'>Alternatif olarak: ${alternatifYazisi}</span>`;
         }
-
-        sonucDiv.style.display = "block";
       } catch (e) {
-        sonucDiv.textContent = "Veri yüklenemedi.";
-        sonucDiv.className = "boykot";
-        sonucDiv.style.display = "block";
-      }
-    }
-
-    async function alternatifleriYukle() {
-      const url = 'https://script.google.com/macros/s/AKfycbwvxbqudb9vwgRn1KOqLjJrKNROWV_oxj7s2QrU3s25_E7mF-9PNBlGkNLI_low3-Qt/exec';
-      const liste = document.getElementById("alternatifKutuListe");
-
-      try {
-        const response = await fetch(url);
-        const text = await response.text();
-        if (!text) throw new Error("Boş veri geldi");
-
-        const rows = text.trim().split("\n").map(row => row.split(","));
-        const data = rows.slice(1);
-
-        localStorage.setItem("alternatifMarkalar", JSON.stringify(data));
-        liste.innerHTML = "";
-
-        data.slice(0, 5).forEach((satir) => {
-          const [boykotMarka, alternatifMarka] = satir;
-          if (boykotMarka && alternatifMarka) {
-            liste.innerHTML += `<li>❌ ${boykotMarka.trim()} → ✅ ${alternatifMarka.trim()}</li>`;
-          }
-        });
-      } catch (e) {
-        liste.innerHTML = '<li>Alternatif veriler yüklenemedi.</li>';
+        sonucDiv.textContent = "Bir hata oluştu.";
       }
     }
 
     async function markaOner() {
-      const marka = document.getElementById("onerilenMarka").value.trim();
-      const mesaj = document.getElementById("onayMesaji");
-      if (!marka) return;
+      const marka = document.getElementById("onerilenMarka").value;
       await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "marka=" + encodeURIComponent(marka)
+        body: new URLSearchParams({ marka })
       });
-      mesaj.textContent = "✔️ Marka öneriniz alındı.";
-      mesaj.style.display = "block";
-      document.getElementById("onerilenMarka").value = "";
+      document.getElementById("onayMesaji").textContent = "✔️ Öneriniz kaydedildi!";
     }
 
     async function gorusGonder() {
-      const metin = document.getElementById("gorusMetni").value.trim();
-      const mesaj = document.getElementById("gorusMesaji");
-      if (!metin) return;
+      const gorus = document.getElementById("gorusMetni").value;
       await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "gorus=" + encodeURIComponent(metin)
+        body: new URLSearchParams({ gorus })
       });
-      mesaj.textContent = "✔️ Görüşünüz alındı, teşekkür ederiz!";
-      mesaj.style.display = "block";
-      document.getElementById("gorusMetni").value = "";
+      document.getElementById("gorusMesaji").textContent = "✔️ Görüşünüz kaydedildi!";
     }
 
     async function alternatifOner() {
-      const boykot = document.getElementById("boykotMarka").value.trim();
-      const alternatif = document.getElementById("alternatifMarka").value.trim();
-      const mesaj = document.getElementById("alternatifMesaji");
-      if (!boykot || !alternatif) return;
+      const boykotMarka = document.getElementById("boykotMarka").value;
+      const alternatifMarka = document.getElementById("alternatifMarka").value;
       await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `boykotMarka=${encodeURIComponent(boykot)}&alternatifMarka=${encodeURIComponent(alternatif)}`
+        body: new URLSearchParams({ boykotMarka, alternatifMarka })
       });
-      mesaj.textContent = "✔️ Alternatif marka öneriniz kaydedildi.";
-      mesaj.style.display = "block";
-      document.getElementById("boykotMarka").value = "";
-      document.getElementById("alternatifMarka").value = "";
+      document.getElementById("alternatifMesaji").textContent = "✔️ Alternatif öneriniz kaydedildi!";
     }
 
     alternatifleriYukle();
