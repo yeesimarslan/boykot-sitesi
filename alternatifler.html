@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternatif Markalar</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #4caf50;
+      margin-bottom: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    li {
+      background-color: #2c2c2c;
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    a {
+      color: #4aa3ff;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📦 Tüm Alternatif Marka Önerileri</h1>
+  <ul id="alternatifListesi">
+    <li>Yükleniyor...</li>
+  </ul>
+  <a href="index.html">⬅️ Geri Dön</a>
+
+  <script>
+    async function alternatifleriYukle() {
+      const url = 'https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec';
+      const liste = document.getElementById("alternatifListesi");
+
+      try {
+        const response = await fetch(url);
+        const text = await response.text();
+        if (!text) throw new Error("Boş veri geldi");
+
+        const rows = text.trim().split("\n").map(row => row.split(","));
+        // İlk satır başlıkları atla
+        const data = rows.slice(1);
+
+        liste.innerHTML = "";
+        data.forEach(([boykotMarka, alternatifMarka]) => {
+          if (boykotMarka && alternatifMarka) {
+            liste.innerHTML += `<li>❌ ${boykotMarka.trim()} → ✅ ${alternatifMarka.trim()}</li>`;
+          }
+        });
+      } catch (e) {
+        liste.innerHTML = '<li>Veriler yüklenemedi. Lütfen daha sonra tekrar deneyin.</li>';
+      }
+    }
+
+    alternatifleriYukle();
+  </script>
+</body>
+</html>
