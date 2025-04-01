@@ -1,51 +1,7 @@
 {
   "boykotListesi": [
     {
-      "marka": "Espressolab",
-      "boykot": true
-    },
-    {
-      "marka": "Çay Saati",
-      "boykot": true
-    },
-    {
-      "marka": "İddaa",
-      "boykot": true
-    },
-    {
-      "marka": "D-Smart",
-      "boykot": true
-    },
-    {
-      "marka": "Şok Market",
-      "boykot": true
-    },
-    {
-      "marka": "Migros",
-      "boykot": true
-    },
-    {
-      "marka": "D&R",
-      "boykot": true
-    },
-    {
-      "marka": "İpekyol",
-      "boykot": true
-    },
-    {
-      "marka": "Ülker",
-      "boykot": true
-    },
-    {
-      "marka": "Mado",
-      "boykot": true
-    },
-    {
       "marka": "AJet",
-      "boykot": true
-    },
-    {
-      "marka": "ETS Tur",
       "boykot": true
     },
     {
@@ -53,23 +9,15 @@
       "boykot": true
     },
     {
-      "marka": "Simit Sarayı",
+      "marka": "Coca-Cola",
       "boykot": true
     },
     {
-      "marka": "Watsons",
+      "marka": "D&R",
       "boykot": true
     },
     {
-      "marka": "Vestel",
-      "boykot": true
-    },
-    {
-      "marka": "Çaykur",
-      "boykot": true
-    },
-    {
-      "marka": "Turkcell",
+      "marka": "D-Smart",
       "boykot": true
     },
     {
@@ -77,15 +25,15 @@
       "boykot": true
     },
     {
-      "marka": "Kamil Koç",
+      "marka": "ETS Tur",
       "boykot": true
     },
     {
-      "marka": "İstikbal",
+      "marka": "Espressolab",
       "boykot": true
     },
     {
-      "marka": "Sleepy",
+      "marka": "Eti",
       "boykot": true
     },
     {
@@ -93,11 +41,87 @@
       "boykot": true
     },
     {
+      "marka": "Kamil Koç",
+      "boykot": true
+    },
+    {
+      "marka": "Lipton",
+      "boykot": true
+    },
+    {
+      "marka": "Mado",
+      "boykot": true
+    },
+    {
+      "marka": "Migros",
+      "boykot": true
+    },
+    {
       "marka": "NTV",
       "boykot": true
     },
     {
+      "marka": "Nestle",
+      "boykot": true
+    },
+    {
+      "marka": "Pınar",
+      "boykot": true
+    },
+    {
+      "marka": "Simit Sarayı",
+      "boykot": true
+    },
+    {
+      "marka": "Sleepy",
+      "boykot": true
+    },
+    {
       "marka": "Star TV",
+      "boykot": true
+    },
+    {
+      "marka": "Starbucks",
+      "boykot": true
+    },
+    {
+      "marka": "Turkcell",
+      "boykot": true
+    },
+    {
+      "marka": "Vestel",
+      "boykot": true
+    },
+    {
+      "marka": "Watsons",
+      "boykot": true
+    },
+    {
+      "marka": "Çay Saati",
+      "boykot": true
+    },
+    {
+      "marka": "Çaykur",
+      "boykot": true
+    },
+    {
+      "marka": "Ülker",
+      "boykot": true
+    },
+    {
+      "marka": "İddaa",
+      "boykot": true
+    },
+    {
+      "marka": "İpekyol",
+      "boykot": true
+    },
+    {
+      "marka": "İstikbal",
+      "boykot": true
+    },
+    {
+      "marka": "Şok Market",
       "boykot": true
     }
   ]
