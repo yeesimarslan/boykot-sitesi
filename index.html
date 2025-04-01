@@ -135,7 +135,6 @@
   <h1>#BoykotListesi</h1>
   <p>Hangi markalar artık yok?</p>
 
-  <!-- Sorgulama Kutusu -->
   <div class="container">
     <h2>Boykot Sorgulama</h2>
     <input type="text" id="markaAdi" placeholder="Marka adını yazın...">
@@ -143,7 +142,6 @@
     <div id="sonuc"></div>
   </div>
 
-  <!-- Öneri Kutusu -->
   <div class="container">
     <h2>Marka Öner</h2>
     <input type="text" id="onerilenMarka" placeholder="Önerilecek marka...">
@@ -186,10 +184,9 @@
       }
     }
 
-    function markaOner() {
+    async function markaOner() {
       const giris = document.getElementById("onerilenMarka");
       const marka = giris.value.trim();
-
       const mesaj = document.getElementById("onayMesaji");
       const liste = document.getElementById("onerilerListesi");
 
@@ -206,6 +203,15 @@
       mesaj.textContent = "✔️ Marka öneriniz alındı.";
       mesaj.style.display = "block";
       giris.value = "";
+
+      // Google Sheets'e gönder
+      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "marka=" + encodeURIComponent(marka)
+      });
     }
   </script>
 
