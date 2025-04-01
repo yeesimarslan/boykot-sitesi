@@ -57,7 +57,7 @@
       text-align: center;
     }
 
-    input {
+    input, select {
       padding: 14px;
       font-size: 16px;
       width: 100%;
@@ -120,6 +120,27 @@
       color: var(--muted);
     }
 
+    #markaListesi {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    #markaListesi li {
+      background-color: var(--card-bg);
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #markaListesi li span {
+      font-size: 16px;
+    }
+
     @media (max-width: 480px) {
       h1 {
         font-size: 20px;
@@ -135,85 +156,12 @@
   <h1>#BoykotListesi</h1>
   <p>Hangi markalar artık yok?</p>
 
+  <!-- Sorgulama Kutusu -->
   <div class="container">
     <h2>Boykot Sorgulama</h2>
     <input type="text" id="markaAdi" placeholder="Marka adını yazın...">
     <button onclick="sorgula()">Sorgula</button>
     <div id="sonuc"></div>
-  </div>
-
-  <div class="container">
-    <h2>Marka Öner</h2>
-    <input type="text" id="onerilenMarka" placeholder="Önerilecek marka...">
-    <button onclick="markaOner()">Marka Öner</button>
-    <div id="onayMesaji" class="onay"></div>
-    <ul id="onerilerListesi"></ul>
-  </div>
-
-  <script>
-    async function sorgula() {
-      const girilen = document.getElementById("markaAdi").value.trim().toLowerCase();
-      const sonucDiv = document.getElementById("sonuc");
-
-      if (girilen === "") {
-        sonucDiv.textContent = "Lütfen bir marka adı girin.";
-        sonucDiv.className = "";
-        sonucDiv.style.display = "block";
-        return;
-      }
-
-      try {
-        const response = await fetch("boykot.json");
-        const data = await response.json();
-
-        const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
-
-        if (bulundu && bulundu.boykot === true) {
-          sonucDiv.textContent = "❌ Bu marka boykot ediliyor.";
-          sonucDiv.className = "boykot";
-        } else {
-          sonucDiv.textContent = "✅ Bu marka şu anda boykot edilmiyor.";
-          sonucDiv.className = "temiz";
-        }
-
-        sonucDiv.style.display = "block";
-      } catch (e) {
-        sonucDiv.textContent = "Veri yüklenemedi.";
-        sonucDiv.className = "boykot";
-        sonucDiv.style.display = "block";
-      }
-    }
-
-    async function markaOner() {
-      const giris = document.getElementById("onerilenMarka");
-      const marka = giris.value.trim();
-      const mesaj = document.getElementById("onayMesaji");
-      const liste = document.getElementById("onerilerListesi");
-
-      if (marka === "") {
-        mesaj.textContent = "Lütfen bir marka adı girin.";
-        mesaj.style.display = "block";
-        return;
-      }
-
-      const li = document.createElement("li");
-      li.textContent = marka;
-      liste.appendChild(li);
-
-      mesaj.textContent = "✔️ Marka öneriniz alındı.";
-      mesaj.style.display = "block";
-      giris.value = "";
-
-      // Google Sheets'e gönder
-      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: "marka=" + encodeURIComponent(marka)
-      });
-    }
-  </script>
-
-</body>
-</html>
+  </
+::contentReference[oaicite:0]{index=0}
+ 
