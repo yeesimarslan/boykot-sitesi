@@ -1,439 +1,104 @@
 {
   "boykotListesi": [
     {
-      "marka": "Starbucks",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "McDonald's",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Nestle",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Pepsi",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Coca-Cola",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "TRT",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "CNN Türk",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "A Haber",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Beyaz TV",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "NTV",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Star TV",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Kral FM",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Türkiye Gazetesi",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Akşam Gazetesi",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Yeni Şafak",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Doğuş Grubu",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Demirören Medya",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Turkuvaz Medya",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
       "marka": "Espressolab",
-      "boykot": true,
-      "kategori": "Otomatik"
+      "boykot": true
     },
     {
-      "marka": "D&R",
-      "boykot": true,
-      "kategori": "Otomatik"
+      "marka": "Çay Saati",
+      "boykot": true
     },
     {
-      "marka": "İdefix",
-      "boykot": true,
-      "kategori": "Otomatik"
+      "marka": "İddaa",
+      "boykot": true
     },
     {
-      "marka": "Demirören AVM",
-      "boykot": true,
-      "kategori": "Otomatik"
+      "marka": "D-Smart",
+      "boykot": true
     },
     {
-      "marka": "Kilim Mobilya",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Ülker",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "İhlas Ev Aletleri",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Turkuaz Yayınevi",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Milli Piyango",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "misli.com",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "iddaa.com",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "ETS Tur",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Doğan Haber Ajansı",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "İhlas Haber Ajansı",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Volkswagen",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Nusr-Et",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Günaydın Restoran",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Zuma",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Da Mario",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "29",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Rüya",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "The Populist",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Lacivert",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Masa",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "COYA",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Vogue",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Gina",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Fenix",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Kiva",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Mezzaluna",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Kebapçı Etiler",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Saltbae",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Çubuklu 29",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Oblix",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "ROKA",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Sait",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Papaioannou",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Bar Des Pres",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Amazónico",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Frankie",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "Gattopardo",
-      "boykot": true,
-      "kategori": "Otomatik"
-    },
-    {
-      "marka": "LC Waikiki",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Mavi",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Gratis",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "A101",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Arko",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "BIM",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Clear",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Columbia",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Domestos",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Elidor",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Fairy",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Finish",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Focus",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Knorr",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Komili",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Kotex",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Lipton",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "Şok Market",
+      "boykot": true
     },
     {
       "marka": "Migros",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "boykot": true
     },
     {
-      "marka": "Nivea",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "D&R",
+      "boykot": true
     },
     {
-      "marka": "OMO",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "İpekyol",
+      "boykot": true
     },
     {
-      "marka": "Papia",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "Ülker",
+      "boykot": true
     },
     {
-      "marka": "Prima",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "Mado",
+      "boykot": true
     },
     {
-      "marka": "Rinso",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "AJet",
+      "boykot": true
     },
     {
-      "marka": "Sana",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "ETS Tur",
+      "boykot": true
+    },
+    {
+      "marka": "CNN Türk",
+      "boykot": true
+    },
+    {
+      "marka": "Simit Sarayı",
+      "boykot": true
+    },
+    {
+      "marka": "Watsons",
+      "boykot": true
+    },
+    {
+      "marka": "Vestel",
+      "boykot": true
+    },
+    {
+      "marka": "Çaykur",
+      "boykot": true
+    },
+    {
+      "marka": "Turkcell",
+      "boykot": true
+    },
+    {
+      "marka": "Denizbank",
+      "boykot": true
+    },
+    {
+      "marka": "Kamil Koç",
+      "boykot": true
+    },
+    {
+      "marka": "İstikbal",
+      "boykot": true
     },
     {
       "marka": "Sleepy",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "boykot": true
     },
     {
-      "marka": "Sok",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "File Market",
+      "boykot": true
     },
     {
-      "marka": "Tursil",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "NTV",
+      "boykot": true
     },
     {
-      "marka": "Vernel",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
+      "marka": "Star TV",
+      "boykot": true
     }
   ]
 }
