@@ -1,7 +1,35 @@
 {
   "boykotListesi": [
     {
+      "marka": "A101",
+      "boykot": true
+    },
+    {
       "marka": "AJet",
+      "boykot": true
+    },
+    {
+      "marka": "Activia",
+      "boykot": true
+    },
+    {
+      "marka": "Atasay Kuyumculuk",
+      "boykot": true
+    },
+    {
+      "marka": "Bein Sports",
+      "boykot": true
+    },
+    {
+      "marka": "Bereket Döner",
+      "boykot": true
+    },
+    {
+      "marka": "Burcu Salça",
+      "boykot": true
+    },
+    {
+      "marka": "BİM",
       "boykot": true
     },
     {
@@ -13,6 +41,10 @@
       "boykot": true
     },
     {
+      "marka": "Colgate",
+      "boykot": true
+    },
+    {
       "marka": "D&R",
       "boykot": true
     },
@@ -21,11 +53,27 @@
       "boykot": true
     },
     {
+      "marka": "Danone",
+      "boykot": true
+    },
+    {
       "marka": "Denizbank",
       "boykot": true
     },
     {
+      "marka": "Doğadan",
+      "boykot": true
+    },
+    {
       "marka": "ETS Tur",
+      "boykot": true
+    },
+    {
+      "marka": "Efes",
+      "boykot": true
+    },
+    {
+      "marka": "Emirgan Sütiş",
       "boykot": true
     },
     {
@@ -37,7 +85,51 @@
       "boykot": true
     },
     {
-      "marka": "File Market",
+      "marka": "Exxen",
+      "boykot": true
+    },
+    {
+      "marka": "FLO",
+      "boykot": true
+    },
+    {
+      "marka": "Fairy",
+      "boykot": true
+    },
+    {
+      "marka": "Faruk Güllüoğlu",
+      "boykot": true
+    },
+    {
+      "marka": "Finish",
+      "boykot": true
+    },
+    {
+      "marka": "Fotomaç",
+      "boykot": true
+    },
+    {
+      "marka": "Frito Lay",
+      "boykot": true
+    },
+    {
+      "marka": "Gebze Center",
+      "boykot": true
+    },
+    {
+      "marka": "Gillette",
+      "boykot": true
+    },
+    {
+      "marka": "HIQ Nutrition",
+      "boykot": true
+    },
+    {
+      "marka": "Head & Shoulders",
+      "boykot": true
+    },
+    {
+      "marka": "Hürriyet",
       "boykot": true
     },
     {
@@ -45,7 +137,39 @@
       "boykot": true
     },
     {
+      "marka": "Kanal D",
+      "boykot": true
+    },
+    {
+      "marka": "Kemer Country",
+      "boykot": true
+    },
+    {
+      "marka": "Kilim Mobilya",
+      "boykot": true
+    },
+    {
+      "marka": "Kinder",
+      "boykot": true
+    },
+    {
+      "marka": "Kristal Kola",
+      "boykot": true
+    },
+    {
+      "marka": "Kızılkayalar",
+      "boykot": true
+    },
+    {
+      "marka": "LC Waikiki",
+      "boykot": true
+    },
+    {
       "marka": "Lipton",
+      "boykot": true
+    },
+    {
+      "marka": "Machka",
       "boykot": true
     },
     {
@@ -57,7 +181,11 @@
       "boykot": true
     },
     {
-      "marka": "NTV",
+      "marka": "Milka",
+      "boykot": true
+    },
+    {
+      "marka": "Mubi",
       "boykot": true
     },
     {
@@ -65,7 +193,23 @@
       "boykot": true
     },
     {
+      "marka": "Pepsi",
+      "boykot": true
+    },
+    {
+      "marka": "Persil",
+      "boykot": true
+    },
+    {
+      "marka": "Posta",
+      "boykot": true
+    },
+    {
       "marka": "Pınar",
+      "boykot": true
+    },
+    {
+      "marka": "Seç Market",
       "boykot": true
     },
     {
@@ -77,11 +221,23 @@
       "boykot": true
     },
     {
-      "marka": "Star TV",
+      "marka": "Starbucks",
       "boykot": true
     },
     {
-      "marka": "Starbucks",
+      "marka": "Sütaş",
+      "boykot": true
+    },
+    {
+      "marka": "Sırma Su",
+      "boykot": true
+    },
+    {
+      "marka": "Teve2",
+      "boykot": true
+    },
+    {
+      "marka": "Torku",
       "boykot": true
     },
     {
@@ -89,11 +245,19 @@
       "boykot": true
     },
     {
+      "marka": "Twist",
+      "boykot": true
+    },
+    {
       "marka": "Vestel",
       "boykot": true
     },
     {
-      "marka": "Watsons",
+      "marka": "Violet Mobilya",
+      "boykot": true
+    },
+    {
+      "marka": "Watson",
       "boykot": true
     },
     {
@@ -113,6 +277,14 @@
       "boykot": true
     },
     {
+      "marka": "İdefix",
+      "boykot": true
+    },
+    {
+      "marka": "İhlas Holding",
+      "boykot": true
+    },
+    {
       "marka": "İpekyol",
       "boykot": true
     },
@@ -121,7 +293,15 @@
       "boykot": true
     },
     {
+      "marka": "İçim",
+      "boykot": true
+    },
+    {
       "marka": "Şok Market",
+      "boykot": true
+    },
+    {
+      "marka": "Şölen",
       "boykot": true
     }
   ]
