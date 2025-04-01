@@ -1,12 +1,20 @@
 {
   "alternatifler": [
     {
+      "boykotMarka": "Migros",
+      "alternatifMarka": "Carrefour"
+    },
+    {
       "boykotMarka": "Starbucks",
-      "alternatifMarka": "Petra"
+      "alternatifMarka": "Sunday Coffee"
     },
     {
       "boykotMarka": "Coca-Cola",
       "alternatifMarka": "Kristal Kola"
+    },
+    {
+      "boykotMarka": "Nestle",
+      "alternatifMarka": "Sütaş"
     },
     {
       "boykotMarka": "Ülker",
@@ -17,8 +25,16 @@
       "alternatifMarka": "Doğadan"
     },
     {
-      "boykotMarka": "Nestle",
-      "alternatifMarka": "Sütaş"
+      "boykotMarka": "Eti",
+      "alternatifMarka": "Şölen"
+    },
+    {
+      "boykotMarka": "Sleepy",
+      "alternatifMarka": "Molfix"
+    },
+    {
+      "boykotMarka": "Pınar",
+      "alternatifMarka": "İçim"
     }
   ]
 }
