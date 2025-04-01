@@ -46,14 +46,19 @@
       text-align: center;
     }
 
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
     .container {
       background-color: var(--card-bg);
       padding: 25px;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      max-width: 420px;
-      margin-bottom: 30px;
       text-align: center;
     }
 
@@ -88,11 +93,11 @@
       background-color: #3fa744;
     }
 
-    #sonuc, #onayMesaji, #gorusMesaji {
-      margin-top: 20px;
-      font-size: 16px;
+    #sonuc, #onayMesaji, #gorusMesaji, #alternatifMesaji {
+      margin-top: 15px;
+      font-size: 15px;
       font-weight: 500;
-      padding: 15px;
+      padding: 12px;
       border-radius: 12px;
       display: none;
     }
@@ -112,14 +117,6 @@
       color: #4aa3ff;
     }
 
-    ul {
-      text-align: left;
-      margin-top: 15px;
-      padding-left: 20px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
     a.button-link {
       text-decoration: none;
       background-color: var(--accent);
@@ -132,43 +129,47 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       margin-bottom: 20px;
     }
-
-    a.button-link:hover {
-      background-color: #3fa744;
-    }
   </style>
 </head>
 <body>
 
   <h1>#BoykotListesi</h1>
   <p>Hangi markalar artık yok?</p>
-
-  <!-- 📋 Tüm Markaları Gör Butonu -->
   <a href="liste.html" class="button-link">📋 Tüm Boykotlu Markaları Gör</a>
 
-  <!-- 🔍 Marka Sorgulama -->
-  <div class="container">
-    <h2>Boykot Sorgulama</h2>
-    <input type="text" id="markaAdi" placeholder="Marka adını yazın...">
-    <button onclick="sorgula()">Sorgula</button>
-    <div id="sonuc"></div>
-  </div>
+  <div class="grid-container">
+    <!-- Sorgulama -->
+    <div class="container">
+      <h2>Boykot Sorgulama</h2>
+      <input type="text" id="markaAdi" placeholder="Marka adını yazın...">
+      <button onclick="sorgula()">Sorgula</button>
+      <div id="sonuc"></div>
+    </div>
 
-  <!-- 💡 Marka Önerisi -->
-  <div class="container">
-    <h2>Marka Öner</h2>
-    <input type="text" id="onerilenMarka" placeholder="Önerilecek marka...">
-    <button onclick="markaOner()">Marka Öner</button>
-    <div id="onayMesaji" class="onay"></div>
-    <ul id="onerilerListesi"></ul>
-  </div>
+    <!-- Marka Öner -->
+    <div class="container">
+      <h2>Marka Öner</h2>
+      <input type="text" id="onerilenMarka" placeholder="Önerilecek marka...">
+      <button onclick="markaOner()">Marka Öner</button>
+      <div id="onayMesaji" class="onay"></div>
+    </div>
 
-  <!-- 💬 Kullanıcı Görüşü -->
-  <div class="container">
-    <h2>Görüşünü Paylaş</h2>
-    <textarea id="gorusMetni" placeholder="Bu site hakkında düşünceniz veya öneriniz..." rows="4"></textarea>
-    <button onclick="gorusGonder()">Görüş Gönder</button>
-    <div id="gorusMesaji" class="onay"></div>
+    <!-- Görüş Paylaş -->
+    <div class="container">
+      <h2>Görüşünü Paylaş</h2>
+      <textarea id="gorusMetni" placeholder="Bu site hakkında düşünceniz veya öneriniz..." rows="4"></textarea>
+      <button onclick="gorusGonder()">Görüş Gönder</button>
+      <div id="gorusMesaji" class="onay"></div>
+    </div>
+
+    <!-- Alternatif Öner -->
+    <div class="container">
+      <h2>Alternatif Marka Öner!</h2>
+      <input type="text" id="boykotMarka" placeholder="Boykot edilen marka">
+      <input type="text" id="alternatifMarka" placeholder="Önerdiğiniz alternatif marka">
+      <button onclick="alternatifOner()">Alternatif Öner</button>
+      <div id="alternatifMesaji" class="onay"></div>
+    </div>
   </div>
 
   <script>
@@ -187,76 +188,4 @@
         const response = await fetch("boykot.json");
         const data = await response.json();
 
-        const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
-
-        if (bulundu && bulundu.boykot === true) {
-          sonucDiv.textContent = "❌ Bu marka boykot ediliyor.";
-          sonucDiv.className = "boykot";
-        } else {
-          sonucDiv.textContent = "✅ Bu marka şu anda boykot edilmiyor.";
-          sonucDiv.className = "temiz";
-        }
-
-        sonucDiv.style.display = "block";
-      } catch (e) {
-        sonucDiv.textContent = "Veri yüklenemedi.";
-        sonucDiv.className = "boykot";
-        sonucDiv.style.display = "block";
-      }
-    }
-
-    async function markaOner() {
-      const giris = document.getElementById("onerilenMarka");
-      const marka = giris.value.trim();
-      const mesaj = document.getElementById("onayMesaji");
-      const liste = document.getElementById("onerilerListesi");
-
-      if (marka === "") {
-        mesaj.textContent = "Lütfen bir marka adı girin.";
-        mesaj.style.display = "block";
-        return;
-      }
-
-      const li = document.createElement("li");
-      li.textContent = marka;
-      liste.appendChild(li);
-
-      mesaj.textContent = "✔️ Marka öneriniz alındı.";
-      mesaj.style.display = "block";
-      giris.value = "";
-
-      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: "marka=" + encodeURIComponent(marka)
-      });
-    }
-
-    async function gorusGonder() {
-      const metin = document.getElementById("gorusMetni").value.trim();
-      const mesaj = document.getElementById("gorusMesaji");
-
-      if (metin === "") {
-        mesaj.textContent = "Lütfen bir görüş yazın.";
-        mesaj.style.display = "block";
-        return;
-      }
-
-      await fetch("https://script.google.com/macros/s/AKfycbzDrANxIi-0GAo1kdF2M91ilcIBy3yoUvGZe8Xh3mBPMG7hJHgMJ0ANGSk3A61M4KGuJA/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: "gorus=" + encodeURIComponent(metin)
-      });
-
-      mesaj.textContent = "✔️ Görüşünüz alındı, teşekkür ederiz!";
-      mesaj.style.display = "block";
-      document.getElementById("gorusMetni").value = "";
-    }
-  </script>
-
-</body>
-</html>
+        const bulundu = data.boykotListesi.find(item =>
