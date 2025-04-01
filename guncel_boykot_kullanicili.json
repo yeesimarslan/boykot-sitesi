@@ -1,0 +1,34 @@
+{
+  "boykotListesi": [
+    {
+      "marka": "Starbucks",
+      "boykot": true,
+      "kategori": "İçecek"
+    },
+    {
+      "marka": "McDonald's",
+      "boykot": true,
+      "kategori": "Fast Food"
+    },
+    {
+      "marka": "LC Waikiki",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Mavi",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Gratis",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "A101",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    }
+  ]
+}
