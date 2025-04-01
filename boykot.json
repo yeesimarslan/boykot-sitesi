@@ -316,7 +316,7 @@
       "kategori": "Kullanıcı Önerisi"
     },
     {
-      "marka": "Sok",
+      "marka": "Arko",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
     },
@@ -326,42 +326,17 @@
       "kategori": "Kullanıcı Önerisi"
     },
     {
-      "marka": "Columbia",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Kotex",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Arko",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Lipton",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Knorr",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
       "marka": "Clear",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
     },
     {
-      "marka": "Tursil",
+      "marka": "Columbia",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
     },
     {
-      "marka": "OMO",
+      "marka": "Domestos",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
     },
@@ -371,27 +346,7 @@
       "kategori": "Kullanıcı Önerisi"
     },
     {
-      "marka": "Papia",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Focus",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Komili",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Prima",
-      "boykot": true,
-      "kategori": "Kullanıcı Önerisi"
-    },
-    {
-      "marka": "Nivea",
+      "marka": "Fairy",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
     },
@@ -401,7 +356,52 @@
       "kategori": "Kullanıcı Önerisi"
     },
     {
-      "marka": "Fairy",
+      "marka": "Focus",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Knorr",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Komili",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Kotex",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Lipton",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Migros",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Nivea",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "OMO",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Papia",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Prima",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
     },
@@ -416,7 +416,12 @@
       "kategori": "Kullanıcı Önerisi"
     },
     {
-      "marka": "Domestos",
+      "marka": "Sok",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
+      "marka": "Tursil",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
     },
