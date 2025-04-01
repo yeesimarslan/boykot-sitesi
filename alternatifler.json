@@ -1,0 +1,24 @@
+{
+  "alternatifler": [
+    {
+      "boykotMarka": "Starbucks",
+      "alternatifMarka": "Petra"
+    },
+    {
+      "boykotMarka": "Coca-Cola",
+      "alternatifMarka": "Kristal Kola"
+    },
+    {
+      "boykotMarka": "Ülker",
+      "alternatifMarka": "Torku"
+    },
+    {
+      "boykotMarka": "Lipton",
+      "alternatifMarka": "Doğadan"
+    },
+    {
+      "boykotMarka": "Nestle",
+      "alternatifMarka": "Sütaş"
+    }
+  ]
+}
