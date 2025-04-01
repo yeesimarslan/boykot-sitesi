@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boykot Sorgulama</title>
+  <style>
+    :root {
+      --green: #4CAF50;
+      --green-dark: #388e3c;
+      --red: #c0392b;
+      --light-bg: #f5f7fa;
+      --white: #fff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: var(--white);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    input {
+      padding: 14px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--green);
+    }
+
+    button {
+      padding: 14px;
+      background-color: var(--green);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--green-dark);
+    }
+
+    #sonuc, #onayMesaji {
+      margin-top: 20px;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 15px;
+      border-radius: 12px;
+      display: none;
+    }
+
+    .boykot {
+      background-color: #fdecea;
+      color: var(--red);
+    }
+
+    .temiz {
+      background-color: #e9f7ef;
+      color: var(--green-dark);
+    }
+
+    .onay {
+      background-color: #e3f2fd;
+      color: #1565c0;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 15px;
+      padding-left: 20px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px;
+      }
+      input, button {
+        font-size: 15px;
+        padding: 12px;
+      }
+      #sonuc, #onayMesaji {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Boykot Listesi Sorgulama</h2>
+    <input type="text" id="markaAdi" placeholder="Marka adını yazın...">
+    <button onclick="sorgula()">Sorgula</button>
+    <div id="sonuc"></div>
+  </div>
+
+  <div class="container">
+    <h2>Yeni Marka Öner</h2>
+    <input type="text" id="onerilenMarka" placeholder="Marka önerinizi yazın...">
+    <button onclick="markaOner()">Marka Öner</button>
+    <div id="onayMesaji" class="onay"></div>
+    <ul id="onerilerListesi"></ul>
+  </div>
+
+  <script>
+    async function sorgula() {
+      const girilen = document.getElementById("markaAdi").value.trim().toLowerCase();
+      const sonucDiv = document.getElementById("sonuc");
+
+      if (girilen === "") {
+        sonucDiv.textContent = "Lütfen bir marka adı girin.";
+        sonucDiv.className = "";
+        sonucDiv.style.display = "block";
+        return;
+      }
+
+      try {
+        const response = await fetch("boykot.json");
+        const data = await response.json();
+
+        const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
+
+        if (bulundu && bulundu.boykot === true) {
+          sonucDiv.textContent = "❌ Bu marka boykot ediliyor.";
+          sonucDiv.className = "boykot";
+        } else {
+          sonucDiv.textContent = "✅ Bu marka şu anda boykot edilmiyor.";
+          sonucDiv.className = "temiz";
+        }
+
+        sonucDiv.style.display = "block";
+      } catch (e) {
+        sonucDiv.textContent = "Veri yüklenemedi.";
+        sonucDiv.className = "boykot";
+        sonucDiv.style.display = "block";
+      }
+    }
+
+    function markaOner() {
+      const giris = document.getElementById("onerilenMarka");
+      const marka = giris.value.trim();
+
+      const mesaj = document.getElementById("onayMesaji");
+      const liste = document.getElementById("onerilerListesi");
+
+      if (marka === "") {
+        mesaj.textContent = "Lütfen bir marka adı girin.";
+        mesaj.style.display = "block";
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = marka;
+      liste.appendChild(li);
+
+      mesaj.textContent = "✔️ Marka öneriniz alındı.";
+      mesaj.style.display = "block";
+      giris.value = "";
+    }
+  </script>
+
+</body>
+</html>

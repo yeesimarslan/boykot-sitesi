@@ -1,0 +1,24 @@
+{
+  "boykotListesi": [
+    { "marka": "espressolab", "boykot": true },
+    { "marka": "starbucks", "boykot": true },
+    { "marka": "coca-cola", "boykot": true },
+    { "marka": "pepsi", "boykot": true },
+    { "marka": "nestle", "boykot": true },
+    { "marka": "algida", "boykot": true },
+    { "marka": "carrefour", "boykot": true },
+    { "marka": "mcdonald's", "boykot": true },
+    { "marka": "unilever", "boykot": true },
+    { "marka": "danone", "boykot": true },
+    { "marka": "domino's pizza", "boykot": true },
+    { "marka": "d&r", "boykot": true },
+    { "marka": "idefix", "boykot": true },
+    { "marka": "mado", "boykot": true },
+    { "marka": "ets tur", "boykot": true },
+    { "marka": "ihlas ev aletleri", "boykot": true },
+    { "marka": "demirören medya", "boykot": true },
+    { "marka": "kilim mobilya", "boykot": true },
+    { "marka": "milli piyango", "boykot": true },
+    { "marka": "doğuş grubu", "boykot": true }
+  ]
+}
