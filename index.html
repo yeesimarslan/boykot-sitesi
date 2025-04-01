@@ -117,17 +117,37 @@
       color: #4aa3ff;
     }
 
-    a.button-link {
-      text-decoration: none;
-      background-color: var(--accent);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-size: 16px;
+    .alt-kutu {
+      margin-top: 50px;
+      width: 100%;
+      max-width: 700px;
+      background-color: #2c2c2c;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .alt-kutu h3 {
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .alt-kutu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0;
+    }
+
+    .alt-kutu ul li {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .alt-kutu a {
+      text-decoration: underline;
+      color: #4aa3ff;
       font-weight: bold;
-      display: inline-block;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -172,105 +192,17 @@
     </div>
   </div>
 
-  <script>
-    async function sorgula() {
-      const girilen = document.getElementById("markaAdi").value.trim().toLowerCase();
-      const sonucDiv = document.getElementById("sonuc");
-
-      if (girilen === "") {
-        sonucDiv.textContent = "Lütfen bir marka adı girin.";
-        sonucDiv.className = "";
-        sonucDiv.style.display = "block";
-        return;
-      }
-
-      try {
-        const response = await fetch("boykot.json");
-        const data = await response.json();
-
-        const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
-
-        if (bulundu && bulundu.boykot === true) {
-          sonucDiv.textContent = "❌ Bu marka boykot ediliyor.";
-          sonucDiv.className = "boykot";
-        } else {
-          sonucDiv.textContent = "✅ Bu marka şu anda boykot edilmiyor.";
-          sonucDiv.className = "temiz";
-        }
-
-        sonucDiv.style.display = "block";
-      } catch (e) {
-        sonucDiv.textContent = "Veri yüklenemedi.";
-        sonucDiv.className = "boykot";
-        sonucDiv.style.display = "block";
-      }
-    }
-
-    async function markaOner() {
-      const marka = document.getElementById("onerilenMarka").value.trim();
-      const mesaj = document.getElementById("onayMesaji");
-
-      if (marka === "") {
-        mesaj.textContent = "Lütfen bir marka adı girin.";
-        mesaj.style.display = "block";
-        return;
-      }
-
-      await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "marka=" + encodeURIComponent(marka)
-      });
-
-      mesaj.textContent = "✔️ Marka öneriniz alındı.";
-      mesaj.style.display = "block";
-      document.getElementById("onerilenMarka").value = "";
-    }
-
-    async function gorusGonder() {
-      const metin = document.getElementById("gorusMetni").value.trim();
-      const mesaj = document.getElementById("gorusMesaji");
-
-      if (metin === "") {
-        mesaj.textContent = "Lütfen bir görüş yazın.";
-        mesaj.style.display = "block";
-        return;
-      }
-
-      await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "gorus=" + encodeURIComponent(metin)
-      });
-
-      mesaj.textContent = "✔️ Görüşünüz alındı, teşekkür ederiz!";
-      mesaj.style.display = "block";
-      document.getElementById("gorusMetni").value = "";
-    }
-
-    async function alternatifOner() {
-      const boykot = document.getElementById("boykotMarka").value.trim();
-      const alternatif = document.getElementById("alternatifMarka").value.trim();
-      const mesaj = document.getElementById("alternatifMesaji");
-
-      if (!boykot || !alternatif) {
-        mesaj.textContent = "Lütfen her iki alanı da doldurun.";
-        mesaj.style.display = "block";
-        return;
-      }
-
-      await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `boykotMarka=${encodeURIComponent(boykot)}&alternatifMarka=${encodeURIComponent(alternatif)}`
-      });
-
-      mesaj.textContent = "✔️ Alternatif marka öneriniz kaydedildi.";
-      mesaj.style.display = "block";
-      document.getElementById("boykotMarka").value = "";
-      document.getElementById("alternatifMarka").value = "";
-    }
-  </script>
+  <!-- Alternatif Öneriler Kutusu -->
+  <div class="alt-kutu">
+    <h3>📦 Son Alternatif Öneriler</h3>
+    <ul>
+      <li>❌ Coca-Cola → ✅ Kristal Kola</li>
+      <li>❌ Lipton → ✅ Doğadan</li>
+      <li>❌ Ülker → ✅ Torku</li>
+      <li>❌ Starbucks → ✅ Petra Coffee</li>
+    </ul>
+    <a href="alternatifler.html">➕ Tümünü Göster</a>
+  </div>
 
 </body>
 </html>
