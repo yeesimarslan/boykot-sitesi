@@ -119,6 +119,7 @@
 
   <script>
     let alternatifler = [];
+    let boykotMarkalar = [];
 
     async function alternatifleriYukle() {
       try {
@@ -147,13 +148,19 @@
         const data = await response.json();
         const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
 
+        boykotMarkalar = data.boykotListesi.map(item => item.marka.toLowerCase().trim());
+
         if (bulundu && bulundu.boykot === true) {
           sonucDiv.innerHTML = "❌ Bu marka boykot ediliyor.";
         } else {
           sonucDiv.innerHTML = "✅ Bu marka şu anda boykot edilmiyor.";
         }
 
-        const eslesenler = alternatifler.filter(item => item.boykotMarka.toLowerCase().trim() === girilen);
+        const eslesenler = alternatifler.filter(item => 
+          item.boykotMarka.toLowerCase().trim() === girilen &&
+          !boykotMarkalar.includes(item.alternatifMarka.toLowerCase().trim())
+        );
+
         if (eslesenler.length > 0) {
           const alternatifYazisi = eslesenler.map(item => `<strong>${item.alternatifMarka.trim()}</strong>`).join(", ");
           sonucDiv.innerHTML += `<br><br><span style='color:#4aa3ff'>Alternatif olarak: ${alternatifYazisi}</span>`;
