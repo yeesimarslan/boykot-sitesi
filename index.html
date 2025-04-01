@@ -49,6 +49,20 @@
       background-color: #2c2c2c;
       padding: 20px;
       border-radius: 12px;
+      margin-bottom: 40px;
+    }
+    #boykotListesiTablo {
+      width: 100%;
+      margin-top: 30px;
+      border-collapse: collapse;
+    }
+    #boykotListesiTablo th, #boykotListesiTablo td {
+      padding: 10px;
+      border: 1px solid #555;
+      text-align: left;
+    }
+    #boykotListesiTablo th {
+      background-color: #333;
     }
   </style>
 </head>
@@ -89,6 +103,18 @@
   <div class="alt-kutu">
     <h2>📦 Son Alternatif Öneriler</h2>
     <ul id="alternatifKutuListe"><li>Yükleniyor...</li></ul>
+  </div>
+
+  <div class="alt-kutu">
+    <h2>📋 Tüm Boykot Edilen Markalar</h2>
+    <table id="boykotListesiTablo">
+      <thead>
+        <tr><th>Marka</th><th>Durum</th></tr>
+      </thead>
+      <tbody id="boykotListesiBody">
+        <tr><td colspan="2">Yükleniyor...</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <script>
@@ -137,6 +163,20 @@
       }
     }
 
+    async function boykotListesiniYukle() {
+      try {
+        const response = await fetch("boykot.json");
+        const data = await response.json();
+        const tabloGovde = document.getElementById("boykotListesiBody");
+        tabloGovde.innerHTML = "";
+        data.boykotListesi.forEach(item => {
+          tabloGovde.innerHTML += `<tr><td>${item.marka}</td><td>${item.boykot ? "❌ Boykot Ediliyor" : "✅ Boykot Edilmiyor"}</td></tr>`;
+        });
+      } catch (e) {
+        console.error("Boykot listesi yüklenemedi", e);
+      }
+    }
+
     async function markaOner() {
       const marka = document.getElementById("onerilenMarka").value;
       await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
@@ -166,6 +206,7 @@
     }
 
     alternatifleriYukle();
+    boykotListesiniYukle();
   </script>
 </body>
 </html>
