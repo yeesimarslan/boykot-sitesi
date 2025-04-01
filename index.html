@@ -195,11 +195,8 @@
   <!-- Alternatif Öneriler Kutusu -->
   <div class="alt-kutu">
     <h3>📦 Son Alternatif Öneriler</h3>
-    <ul>
-      <li>❌ Coca-Cola → ✅ Kristal Kola</li>
-      <li>❌ Lipton → ✅ Doğadan</li>
-      <li>❌ Ülker → ✅ Torku</li>
-      <li>❌ Starbucks → ✅ Petra Coffee</li>
+    <ul id="alternatifKutuListe">
+      <li>Yükleniyor...</li>
     </ul>
     <a href="alternatifler.html">➕ Tümünü Göster</a>
   </div>
@@ -230,7 +227,6 @@
           sonucDiv.className = "temiz";
         }
 
-        // Alternatif öneri kontrolü
         const alternatifler = JSON.parse(localStorage.getItem("alternatifMarkalar") || "[]");
         const alternatif = alternatifler.find(([boykotMarka]) => boykotMarka.toLowerCase().trim() === girilen);
         if (alternatif) {
@@ -244,7 +240,77 @@
         sonucDiv.style.display = "block";
       }
     }
-  </script>
 
+    async function alternatifleriYukle() {
+      const url = 'https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec';
+      const liste = document.getElementById("alternatifKutuListe");
+
+      try {
+        const response = await fetch(url);
+        const text = await response.text();
+        if (!text) throw new Error("Boş veri geldi");
+
+        const rows = text.trim().split("\n").map(row => row.split(","));
+        const data = rows.slice(1);
+
+        localStorage.setItem("alternatifMarkalar", JSON.stringify(data));
+        liste.innerHTML = "";
+
+        data.slice(0, 5).forEach(([boykotMarka, alternatifMarka]) => {
+          if (boykotMarka && alternatifMarka) {
+            liste.innerHTML += `<li>❌ ${boykotMarka.trim()} → ✅ ${alternatifMarka.trim()}</li>`;
+          }
+        });
+      } catch (e) {
+        liste.innerHTML = '<li>Alternatif veriler yüklenemedi.</li>';
+      }
+    }
+
+    async function markaOner() {
+      const marka = document.getElementById("onerilenMarka").value.trim();
+      const mesaj = document.getElementById("onayMesaji");
+      if (!marka) return;
+      await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "marka=" + encodeURIComponent(marka)
+      });
+      mesaj.textContent = "✔️ Marka öneriniz alındı.";
+      mesaj.style.display = "block";
+      document.getElementById("onerilenMarka").value = "";
+    }
+
+    async function gorusGonder() {
+      const metin = document.getElementById("gorusMetni").value.trim();
+      const mesaj = document.getElementById("gorusMesaji");
+      if (!metin) return;
+      await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "gorus=" + encodeURIComponent(metin)
+      });
+      mesaj.textContent = "✔️ Görüşünüz alındı, teşekkür ederiz!";
+      mesaj.style.display = "block";
+      document.getElementById("gorusMetni").value = "";
+    }
+
+    async function alternatifOner() {
+      const boykot = document.getElementById("boykotMarka").value.trim();
+      const alternatif = document.getElementById("alternatifMarka").value.trim();
+      const mesaj = document.getElementById("alternatifMesaji");
+      if (!boykot || !alternatif) return;
+      await fetch("https://script.google.com/macros/s/AKfycbw_Qr5Be-fMhCx6-LlKe98QLGDLBv1tn4u_ZS2TjoZIHEhN3cZjJJfKv-kpyIuCMYqb/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `boykotMarka=${encodeURIComponent(boykot)}&alternatifMarka=${encodeURIComponent(alternatif)}`
+      });
+      mesaj.textContent = "✔️ Alternatif marka öneriniz kaydedildi.";
+      mesaj.style.display = "block";
+      document.getElementById("boykotMarka").value = "";
+      document.getElementById("alternatifMarka").value = "";
+    }
+
+    alternatifleriYukle();
+  </script>
 </body>
 </html>
