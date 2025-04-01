@@ -416,6 +416,11 @@
       "kategori": "Kullanıcı Önerisi"
     },
     {
+      "marka": "Sleepy",
+      "boykot": true,
+      "kategori": "Kullanıcı Önerisi"
+    },
+    {
       "marka": "Sok",
       "boykot": true,
       "kategori": "Kullanıcı Önerisi"
