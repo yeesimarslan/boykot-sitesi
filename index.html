@@ -119,7 +119,11 @@
 
   <div class="alt-kutu">
     <h2>📣 Ziyaretçi Yorumları</h2>
-    <ul>
+    <form id="yorumFormu">
+      <textarea id="yeniYorum" placeholder="Yorumunuzu yazın..." required></textarea>
+      <button type="submit">Yorum Gönder</button>
+    </form>
+    <ul id="yorumListesi">
       <li>“Böyle bir listeye ihtiyacımız vardı, ellerinize sağlık.”</li>
       <li>“Alternatif markaları da görmek harika olmuş.”</li>
       <li>“Boykot edilen markaları takip etmek artık çok kolay.”</li>
@@ -215,6 +219,17 @@
       });
       document.getElementById("alternatifMesaji").textContent = "✔️ Alternatif öneriniz kaydedildi!";
     }
+
+    document.getElementById("yorumFormu").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const yorum = document.getElementById("yeniYorum").value.trim();
+      if (yorum) {
+        const yeniLi = document.createElement("li");
+        yeniLi.textContent = `“${yorum}”`;
+        document.getElementById("yorumListesi").prepend(yeniLi);
+        document.getElementById("yeniYorum").value = "";
+      }
+    });
 
     alternatifleriYukle();
     boykotListesiniYukle();
