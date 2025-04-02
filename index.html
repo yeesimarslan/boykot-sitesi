@@ -102,7 +102,7 @@
 
   <div class="alt-kutu">
     <h2>📦 Son Alternatif Öneriler</h2>
-    <ul id="alternatifKutuListe"><li>Yükleniyor...</li></ul>
+    <p style="color:#aaa">Alternatif öneriler doğrulanma sürecindedir. Yakında güncellenecektir.</p>
   </div>
 
   <div class="alt-kutu">
@@ -126,13 +126,6 @@
         const response = await fetch("alternatifler.json");
         const data = await response.json();
         alternatifler = data.alternatifler;
-
-        const liste = document.getElementById("alternatifKutuListe");
-        liste.innerHTML = "";
-        const ilkBes = alternatifler.slice(0, 5);
-        ilkBes.forEach(item => {
-          liste.innerHTML += `<li>❌ ${item.boykotMarka} → ✅ ${item.alternatifMarka}</li>`;
-        });
       } catch (e) {
         console.error("Alternatifler yüklenemedi", e);
       }
@@ -147,7 +140,6 @@
         const response = await fetch("boykot.json");
         const data = await response.json();
         const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
-
         boykotMarkalar = data.boykotListesi.map(item => item.marka.toLowerCase().trim());
 
         if (bulundu && bulundu.boykot === true) {
@@ -156,7 +148,7 @@
           sonucDiv.innerHTML = "✅ Bu marka şu anda boykot edilmiyor.";
         }
 
-        const eslesenler = alternatifler.filter(item => 
+        const eslesenler = alternatifler.filter(item =>
           item.boykotMarka.toLowerCase().trim() === girilen &&
           !boykotMarkalar.includes(item.alternatifMarka.toLowerCase().trim())
         );
