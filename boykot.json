@@ -13,12 +13,12 @@
     {
       "marka": "Ajet",
       "boykot": true,
-      "neden": "Türk hava yollarına ait."
+      "neden": ""
     },
     {
       "marka": "Atasay Kuyumculuk",
       "boykot": true,
-      "neden": "Ortakları arasında AKP’li Abdülkadir Emin Önen var."
+      "neden": ""
     },
     {
       "marka": "Banvit",
@@ -33,7 +33,7 @@
     {
       "marka": "Bereket Döner",
       "boykot": true,
-      "neden": "Hükümet yanlısı."
+      "neden": ""
     },
     {
       "marka": "Bim",
@@ -53,7 +53,7 @@
     {
       "marka": "Burcu Salça",
       "boykot": true,
-      "neden": "Sahibi AKP meclis üyesi."
+      "neden": ""
     },
     {
       "marka": "Burger King",
@@ -78,7 +78,7 @@
     {
       "marka": "Cnn Türk",
       "boykot": true,
-      "neden": ""
+      "neden": "Demirören Medya Grubuna aittir."
     },
     {
       "marka": "Coca-Cola",
@@ -93,7 +93,7 @@
     {
       "marka": "D&R",
       "boykot": true,
-      "neden": "Turkuvaz Grubu’na aittir. (Sabah gazetesi, A Haber vb.)"
+      "neden": "Turkuvaz Grubu’na satıldı. Hükümete yakın medya grubuna ait."
     },
     {
       "marka": "D-Smart",
@@ -108,7 +108,7 @@
     {
       "marka": "Denizbank",
       "boykot": true,
-      "neden": "Birleşik Arap Emirlikleri merkezli Emirates NBD'ye ait."
+      "neden": ""
     },
     {
       "marka": "Doğadan",
@@ -123,12 +123,12 @@
     {
       "marka": "Efes",
       "boykot": true,
-      "neden": "Hükümet yanlısı Anadolu Gruba ait."
+      "neden": ""
     },
     {
       "marka": "Emirgan Sütiş",
       "boykot": true,
-      "neden": "Espressolab ile aynı sahipler."
+      "neden": ""
     },
     {
       "marka": "Espressolab",
@@ -153,12 +153,12 @@
     {
       "marka": "Ets Tur",
       "boykot": true,
-      "neden": "Kültür ve Turizm Bakanına ait."
+      "neden": ""
     },
     {
       "marka": "Exxen",
       "boykot": true,
-      "neden": "Tepkisizlik ve hükümet yanlısı."
+      "neden": "Tepkisizlik & Hükümet yanlısı."
     },
     {
       "marka": "Fairy",
@@ -173,7 +173,7 @@
     {
       "marka": "File Market",
       "boykot": true,
-      "neden": "Sahibi BİM."
+      "neden": ""
     },
     {
       "marka": "Finish",
@@ -183,7 +183,7 @@
     {
       "marka": "Flo",
       "boykot": true,
-      "neden": "Ülker ve BİM ortaklığı."
+      "neden": "Ülker ve BİM ortaklığı şirketi."
     },
     {
       "marka": "Frito Lay",
@@ -228,7 +228,7 @@
     {
       "marka": "Kamil Koç",
       "boykot": true,
-      "neden": "Hükümet yanlısı."
+      "neden": ""
     },
     {
       "marka": "Kanal D",
@@ -243,7 +243,7 @@
     {
       "marka": "Kilim Mobilya",
       "boykot": true,
-      "neden": "Demirören Holdinge aittir."
+      "neden": ""
     },
     {
       "marka": "Kinder",
@@ -278,7 +278,7 @@
     {
       "marka": "Lc Waikiki",
       "boykot": true,
-      "neden": ""
+      "neden": "Ortaklarından Şefik Yılmaz Dizdar AKP’li."
     },
     {
       "marka": "Lipton",
@@ -288,7 +288,7 @@
     {
       "marka": "Machka",
       "boykot": true,
-      "neden": "Ayaydın ailesine aittir."
+      "neden": ""
     },
     {
       "marka": "Mado",
@@ -318,12 +318,12 @@
     {
       "marka": "Milli Piyango",
       "boykot": true,
-      "neden": "Demirören Medya Grubuna aittir."
+      "neden": ""
     },
     {
       "marka": "Mubi",
       "boykot": true,
-      "neden": "Tepkisizlik."
+      "neden": ""
     },
     {
       "marka": "Namet",
@@ -383,17 +383,17 @@
     {
       "marka": "Seç Market",
       "boykot": true,
-      "neden": "Yıldız Holdinge aittir. Franchising sistemiyle çalışıyor."
+      "neden": ""
     },
     {
       "marka": "Simit Sarayı",
       "boykot": true,
-      "neden": "Hükümet yanlısı."
+      "neden": ""
     },
     {
       "marka": "Sleepy",
       "boykot": true,
-      "neden": "AKP il başkan yardımcısı ve aday adayı bağlantılı."
+      "neden": "Eski AKP il başkan yardımcısı ve milletvekili aday adayı."
     },
     {
       "marka": "Star Tv",
@@ -443,17 +443,17 @@
     {
       "marka": "Turkcell",
       "boykot": true,
-      "neden": "Varlık Fonuna bağlı."
+      "neden": ""
     },
     {
       "marka": "Twist",
       "boykot": true,
-      "neden": "Ayaydın ailesine aittir."
+      "neden": ""
     },
     {
       "marka": "Vestel",
       "boykot": true,
-      "neden": "Hükümet yanlısı."
+      "neden": ""
     },
     {
       "marka": "Violet Mobilya",
@@ -473,7 +473,7 @@
     {
       "marka": "Çaykur",
       "boykot": true,
-      "neden": "Hükümet yanlısı."
+      "neden": ""
     },
     {
       "marka": "Ülker",
@@ -483,12 +483,12 @@
     {
       "marka": "İddaa",
       "boykot": true,
-      "neden": "Demirören Holding iştiraki tarafından işletiliyor. Alt kuruluşlardan elde edilen kâr paylaşılıyor."
+      "neden": "Demirören Holding iştiraki. Alt kuruluşlardan elde edilen kârdan pay almaktadır."
     },
     {
       "marka": "İdefix",
       "boykot": true,
-      "neden": "Turkuaz Medya Grubuna aittir."
+      "neden": ""
     },
     {
       "marka": "İhlas Holding",
@@ -498,12 +498,12 @@
     {
       "marka": "İpekyol",
       "boykot": true,
-      "neden": "Ayaydın ailesi AKP bağlantılı. Kızları AKP milletvekili."
+      "neden": "AKP milletvekili kızı ve babası AKP aday. Hükümet yanlısı."
     },
     {
       "marka": "İstikbal",
       "boykot": true,
-      "neden": "Hükümet yanlısı."
+      "neden": ""
     },
     {
       "marka": "İstinye Park",
@@ -529,6 +529,11 @@
       "marka": "Şölen",
       "boykot": true,
       "neden": ""
+    },
+    {
+      "marka": "Puhu TV",
+      "boykot": true,
+      "neden": "Hükümet yanlısı Doğuş Grubuna aittir."
     }
   ]
 }
