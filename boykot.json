@@ -534,6 +534,66 @@
       "marka": "Puhu TV",
       "boykot": true,
       "neden": "Hükümet yanlısı Doğuş Grubuna aittir."
+    },
+    {
+      "marka": "Çitlekçi",
+      "boykot": true,
+      "neden": "AKP destekli büyüyen ve son yıllarda şubeleşen marka."
+    },
+    {
+      "marka": "Başdaş Market",
+      "boykot": true,
+      "neden": "Sahibi ve ailesi MÜSİAD üyesi ve AKP ilçe başkanıdır."
+    },
+    {
+      "marka": "Pelit Pastaneleri",
+      "boykot": true,
+      "neden": "AKP Milletvekili Nihan Ayan ve ailesine aittir."
+    },
+    {
+      "marka": "Ünal Peynircilik",
+      "boykot": true,
+      "neden": "Sahibi AKP Tekirdağ il yönetiminde görev yapmış."
+    },
+    {
+      "marka": "Volkswagen Arena",
+      "boykot": true,
+      "neden": "Pozitif Organizasyon, Doğuş grubuna aittir."
+    },
+    {
+      "marka": "Akbank Caz Festivali",
+      "boykot": true,
+      "neden": "Pozitif Organizasyon, Doğuş grubuna aittir."
+    },
+    {
+      "marka": "tiedup",
+      "boykot": true,
+      "neden": "Sahibi Rana Yazıcı AKP’li."
+    },
+    {
+      "marka": "Kopernik Kitap",
+      "boykot": true,
+      "neden": "Sahibi, muhalifleri vatan haini ilan eden kişi."
+    },
+    {
+      "marka": "Bizim Lokanta",
+      "boykot": true,
+      "neden": "Murat Ülker’e aittir."
+    },
+    {
+      "marka": "İNTİBA Döner",
+      "boykot": true,
+      "neden": "Sahipleri AKP’li."
+    },
+    {
+      "marka": "Çelenes",
+      "boykot": true,
+      "neden": "Sahibi AKP’ye yakın. İsviçre ile ilgisi yok."
+    },
+    {
+      "marka": "Mikel Coffee",
+      "boykot": true,
+      "neden": "Kurucuları AKP’li. Espressolab gibi türüyorlar."
     }
   ]
 }
