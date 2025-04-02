@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -64,7 +63,151 @@
 </head>
 <body>
   <h1>#BoykotListesi</h1>
-  <!-- Tüm içerik güncellenmiş haliyle burada olacak -->
-  <p>Canvas'taki eksiksiz HTML içeriği buraya başarıyla yazıldı.</p>
+
+  <div class="alt-kutu">
+    <h2>📣 Ziyaretçi Yorumları</h2>
+    <form id="yorumFormu">
+      <textarea id="yeniYorum" placeholder="Yorumunuzu yazın..." required></textarea>
+      <button type="submit">Yorum Gönder</button>
+    </form>
+    <ul id="yorumListesi"></ul>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Marka Sorgula</h2>
+      <input type="text" id="markaAdi" placeholder="Marka adını yazın">
+      <button onclick="sorgula()">Sorgula</button>
+      <div id="sonuc"></div>
+    </div>
+
+    <div class="card">
+      <h2>Boykot Marka Öner</h2>
+      <input type="text" id="onerilenMarka" placeholder="Marka adı">
+      <button onclick="markaOner()">Marka Öner</button>
+      <div id="onayMesaji"></div>
+    </div>
+
+    <div class="card">
+      <h2>Görüşünü Paylaş</h2>
+      <textarea id="gorusMetni" placeholder="Bu site hakkında görüşünüz..."></textarea>
+      <button onclick="gorusGonder()">Gönder</button>
+      <div id="gorusMesaji"></div>
+    </div>
+
+    <div class="card">
+      <h2>Alternatif Marka Öner</h2>
+      <input type="text" id="boykotMarka" placeholder="Boykot edilen marka">
+      <input type="text" id="alternatifMarka" placeholder="Önerdiğiniz alternatif">
+      <button onclick="alternatifOner()">Alternatif Öner</button>
+      <div id="alternatifMesaji"></div>
+    </div>
+  </div>
+
+  <div class="alt-kutu">
+    <h2>📋 Tüm Boykot Edilen Markalar</h2>
+    <table id="boykotListesiTablo">
+      <thead>
+        <tr><th>Marka</th><th>Durum</th><th>Boykot Nedeni</th></tr>
+      </thead>
+      <tbody id="boykotListesiBody">
+        <tr><td colspan="3">Yükleniyor...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let alternatifler = [];
+    let boykotMarkalar = [];
+
+    async function alternatifleriYukle() {
+      try {
+        const response = await fetch("alternatifler.json");
+        const data = await response.json();
+        alternatifler = data.alternatifler;
+      } catch (e) {
+        console.error("Alternatifler yüklenemedi", e);
+      }
+    }
+
+    async function sorgula() {
+      const girilen = document.getElementById("markaAdi").value.trim().toLowerCase();
+      const sonucDiv = document.getElementById("sonuc");
+      sonucDiv.innerHTML = "";
+
+      try {
+        const response = await fetch("boykot.json");
+        const data = await response.json();
+        const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
+        boykotMarkalar = data.boykotListesi.map(item => item.marka.toLowerCase().trim());
+
+        if (bulundu && bulundu.boykot === true) {
+          sonucDiv.innerHTML = `❌ Bu marka boykot ediliyor.<br><strong>Neden:</strong> ${bulundu.neden || "Belirtilmemiş"}`;
+        } else {
+          sonucDiv.innerHTML = "✅ Bu marka şu anda boykot edilmiyor.";
+        }
+
+        const eslesenler = alternatifler.filter(item =>
+          item.boykotMarka.toLowerCase().trim() === girilen &&
+          !boykotMarkalar.includes(item.alternatifMarka.toLowerCase().trim())
+        );
+
+        if (eslesenler.length > 0) {
+          const alternatifYazisi = eslesenler.map(item => `<strong>${item.alternatifMarka.trim()}</strong>`).join(", ");
+          sonucDiv.innerHTML += `<br><br><span style='color:#4aa3ff'>Alternatif olarak: ${alternatifYazisi}</span>`;
+        }
+      } catch (e) {
+        sonucDiv.textContent = "Bir hata oluştu.";
+      }
+    }
+
+    async function boykotListesiniYukle() {
+      try {
+        const response = await fetch("boykot.json");
+        const data = await response.json();
+        const tabloGovde = document.getElementById("boykotListesiBody");
+        tabloGovde.innerHTML = "";
+        data.boykotListesi.forEach(item => {
+          tabloGovde.innerHTML += `<tr><td>${item.marka}</td><td>${item.boykot ? "❌ Boykot Ediliyor" : "✅ Boykot Edilmiyor"}</td><td>${item.neden || "-"}</td></tr>`;
+        });
+      } catch (e) {
+        console.error("Boykot listesi yüklenemedi", e);
+      }
+    }
+
+    async function yorumlariGetir() {
+      try {
+        const response = await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQmfdjdbPOoOjg4Hm4vHrTW3_wRiM70mjKDO9kX_oDqWY7h4pDgbycb8OF31sG758EKCQKFl4Fj2W2P/pub?gid=2065333465&single=true&output=csv");
+        const text = await response.text();
+        const satirlar = text.trim().split("\n");
+        const liste = document.getElementById("yorumListesi");
+        liste.innerHTML = "";
+        satirlar.reverse().forEach(yorum => {
+          const li = document.createElement("li");
+          li.textContent = `“${yorum}”`;
+          liste.appendChild(li);
+        });
+      } catch (e) {
+        console.error("Yorumlar alınamadı", e);
+      }
+    }
+
+    document.getElementById("yorumFormu").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const yorum = document.getElementById("yeniYorum").value.trim();
+      if (yorum) {
+        await fetch("https://script.google.com/macros/s/AKfycbxYpopOGoNyDXSurmt5HAjv5e9Hi9ijWAYqowH2i0DafuDaTRa_VTSy7z2Lds6_a3l0/exec", {
+          method: "POST",
+          body: new URLSearchParams({ yorum })
+        });
+        document.getElementById("yeniYorum").value = "";
+        yorumlariGetir();
+      }
+    });
+
+    alternatifleriYukle();
+    boykotListesiniYukle();
+    yorumlariGetir();
+  </script>
 </body>
 </html>
