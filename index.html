@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>#BoykotListesi</title>
+</head>
+<body>
+  <h1>#BoykotListesi</h1>
+
+  <div class="alt-kutu" style="margin-top: 0;">
+    <h2>📣 Ziyaretçi Yorumları</h2>
+    <form id="yorumFormu">
+      <textarea id="yeniYorum" placeholder="Yorumunuzu yazın..." required></textarea>
+      <button type="submit">Yorum Gönder</button>
+    </form>
+    <ul id="yorumListesi"></ul>
+  </div>
+
+  <script>
+    async function yorumlariGetir() {
+      try {
+        const response = await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vR4shD8HdwrnAOgKoBSvMi1YdKfek7FQq3rFc7LQXhKYmO9zkSYF2zHZ-BP1cDbKO6Em4PoZ2jSCQOj/pub?output=csv");
+        const text = await response.text();
+        const satirlar = text.trim().split("\n");
+        const liste = document.getElementById("yorumListesi");
+        liste.innerHTML = "";
+        satirlar.reverse().forEach(yorum => {
+          const li = document.createElement("li");
+          li.textContent = `“${yorum}”`;
+          liste.appendChild(li);
+        });
+      } catch (e) {
+        console.error("Yorumlar alınamadı", e);
+      }
+    }
+
+    document.getElementById("yorumFormu").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const yorum = document.getElementById("yeniYorum").value.trim();
+      if (yorum) {
+        await fetch("https://script.google.com/macros/s/AKfycbxYpopOGoNyDXSurmt5HAjv5e9Hi9ijWAYqowH2i0DafuDaTRa_VTSy7z2Lds6_a3l0/exec", {
+          method: "POST",
+          body: new URLSearchParams({ yorum })
+        });
+        document.getElementById("yeniYorum").value = "";
+        yorumlariGetir();
+      }
+    });
+
+    yorumlariGetir();
+  </script>
+</body>
+</html>
