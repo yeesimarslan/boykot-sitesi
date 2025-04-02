@@ -5,11 +5,11 @@
       "boykot": true
     },
     {
-      "marka": "AJet",
+      "marka": "Activia",
       "boykot": true
     },
     {
-      "marka": "Activia",
+      "marka": "Ajet",
       "boykot": true
     },
     {
@@ -25,15 +25,15 @@
       "boykot": true
     },
     {
+      "marka": "Bi̇m",
+      "boykot": true
+    },
+    {
       "marka": "Burcu Salça",
       "boykot": true
     },
     {
-      "marka": "BİM",
-      "boykot": true
-    },
-    {
-      "marka": "CNN Türk",
+      "marka": "Cnn Türk",
       "boykot": true
     },
     {
@@ -65,10 +65,6 @@
       "boykot": true
     },
     {
-      "marka": "ETS Tur",
-      "boykot": true
-    },
-    {
       "marka": "Efes",
       "boykot": true
     },
@@ -85,11 +81,11 @@
       "boykot": true
     },
     {
-      "marka": "Exxen",
+      "marka": "Ets Tur",
       "boykot": true
     },
     {
-      "marka": "FLO",
+      "marka": "Exxen",
       "boykot": true
     },
     {
@@ -101,11 +97,15 @@
       "boykot": true
     },
     {
+      "marka": "File Market",
+      "boykot": true
+    },
+    {
       "marka": "Finish",
       "boykot": true
     },
     {
-      "marka": "Fotomaç",
+      "marka": "Flo",
       "boykot": true
     },
     {
@@ -121,11 +121,11 @@
       "boykot": true
     },
     {
-      "marka": "HIQ Nutrition",
+      "marka": "Head & Shoulders",
       "boykot": true
     },
     {
-      "marka": "Head & Shoulders",
+      "marka": "Hiq Nutrition",
       "boykot": true
     },
     {
@@ -161,7 +161,7 @@
       "boykot": true
     },
     {
-      "marka": "LC Waikiki",
+      "marka": "Lc Waikiki",
       "boykot": true
     },
     {
@@ -193,6 +193,10 @@
       "boykot": true
     },
     {
+      "marka": "Ntv",
+      "boykot": true
+    },
+    {
       "marka": "Pepsi",
       "boykot": true
     },
@@ -221,15 +225,15 @@
       "boykot": true
     },
     {
+      "marka": "Star Tv",
+      "boykot": true
+    },
+    {
       "marka": "Starbucks",
       "boykot": true
     },
     {
       "marka": "Sütaş",
-      "boykot": true
-    },
-    {
-      "marka": "Sırma Su",
       "boykot": true
     },
     {
@@ -257,7 +261,7 @@
       "boykot": true
     },
     {
-      "marka": "Watson",
+      "marka": "Watsons",
       "boykot": true
     },
     {
