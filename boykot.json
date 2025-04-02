@@ -2,427 +2,533 @@
   "boykotListesi": [
     {
       "marka": "A101",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Activia",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Ajet",
-      "boykot": true
+      "boykot": true,
+      "neden": "Türk hava yollarına ait."
     },
     {
       "marka": "Atasay Kuyumculuk",
-      "boykot": true
+      "boykot": true,
+      "neden": "Ortakları arasında AKP’li Abdülkadir Emin Önen var."
     },
     {
       "marka": "Banvit",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Bein Sports",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Bereket Döner",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Bim",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Bi̇m",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Burcu",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Burcu Salça",
-      "boykot": true
+      "boykot": true,
+      "neden": "Sahibi AKP meclis üyesi."
     },
     {
       "marka": "Burger King",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Carrefour",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Celenes",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Celenes By Sweden",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Cnn Türk",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Coca-Cola",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Colgate",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "D&R",
-      "boykot": true
+      "boykot": true,
+      "neden": "Turkuvaz Grubu’na aittir. (Sabah gazetesi, A Haber vb.)"
     },
     {
       "marka": "D-Smart",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Holdinge aittir."
     },
     {
       "marka": "Danone",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Denizbank",
-      "boykot": true
+      "boykot": true,
+      "neden": "Birleşik Arap Emirlikleri merkezli Emirates NBD'ye ait."
     },
     {
       "marka": "Doğadan",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Doğuş Çay",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Efes",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı Anadolu Gruba ait."
     },
     {
       "marka": "Emirgan Sütiş",
-      "boykot": true
+      "boykot": true,
+      "neden": "Espressolab ile aynı sahipler."
     },
     {
       "marka": "Espressolab",
-      "boykot": true
+      "boykot": true,
+      "neden": "Kadir Topbaş’ın oğlu ile ortaklık. Hükümet yanlısı."
     },
     {
       "marka": "Esse Kuaför",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Eti",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Eti Gıda",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Ets Tur",
-      "boykot": true
+      "boykot": true,
+      "neden": "Kültür ve Turizm Bakanına ait."
     },
     {
       "marka": "Exxen",
-      "boykot": true
+      "boykot": true,
+      "neden": "Tepkisizlik ve hükümet yanlısı."
     },
     {
       "marka": "Fairy",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Faruk Güllüoğlu",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "File Market",
-      "boykot": true
+      "boykot": true,
+      "neden": "Sahibi BİM."
     },
     {
       "marka": "Finish",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Flo",
-      "boykot": true
+      "boykot": true,
+      "neden": "Ülker ve BİM ortaklığı."
     },
     {
       "marka": "Frito Lay",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Gebze Center",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Gillette",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Gratis",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Head & Shoulders",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Hem İstanbul",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Hiq Nutrition",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Hürriyet",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Medya Grubuna aittir."
     },
     {
       "marka": "Kamil Koç",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Kanal D",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Medya Grubuna aittir."
     },
     {
       "marka": "Kemer Country",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Kilim Mobilya",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Holdinge aittir."
     },
     {
       "marka": "Kinder",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Komagene",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Kotex",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Kristal Kola",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Kızılay Maden Suyu",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Kızılkayalar",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Lc Waikiki",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Lipton",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Machka",
-      "boykot": true
+      "boykot": true,
+      "neden": "Ayaydın ailesine aittir."
     },
     {
       "marka": "Mado",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Malboro",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Medical Park Hastanesi",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Migros",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı Anadolu Gruba ait."
     },
     {
       "marka": "Milka",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Milli Piyango",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Medya Grubuna aittir."
     },
     {
       "marka": "Mubi",
-      "boykot": true
+      "boykot": true,
+      "neden": "Tepkisizlik."
     },
     {
       "marka": "Namet",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Nestle",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Ntv",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Optimum Avm",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Pepsi",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Persil",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Posta",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Medya Grubuna aittir."
     },
     {
       "marka": "Ptt",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Pınar",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Saray Muhallebicisi",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Sek",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Seç Market",
-      "boykot": true
+      "boykot": true,
+      "neden": "Yıldız Holdinge aittir. Franchising sistemiyle çalışıyor."
     },
     {
       "marka": "Simit Sarayı",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Sleepy",
-      "boykot": true
+      "boykot": true,
+      "neden": "AKP il başkan yardımcısı ve aday adayı bağlantılı."
     },
     {
       "marka": "Star Tv",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Starbucks",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Sütaş",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Sütiş",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Tadelle",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Tat",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Teve2",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Medya Grubuna aittir."
     },
     {
       "marka": "Togg",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Torku",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Turkcell",
-      "boykot": true
+      "boykot": true,
+      "neden": "Varlık Fonuna bağlı."
     },
     {
       "marka": "Twist",
-      "boykot": true
+      "boykot": true,
+      "neden": "Ayaydın ailesine aittir."
     },
     {
       "marka": "Vestel",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Violet Mobilya",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Watsons",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Çay Saati",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Çaykur",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "Ülker",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "İddaa",
-      "boykot": true
+      "boykot": true,
+      "neden": "Demirören Holding iştiraki tarafından işletiliyor. Alt kuruluşlardan elde edilen kâr paylaşılıyor."
     },
     {
       "marka": "İdefix",
-      "boykot": true
+      "boykot": true,
+      "neden": "Turkuaz Medya Grubuna aittir."
     },
     {
       "marka": "İhlas Holding",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "İpekyol",
-      "boykot": true
+      "boykot": true,
+      "neden": "Ayaydın ailesi AKP bağlantılı. Kızları AKP milletvekili."
     },
     {
       "marka": "İstikbal",
-      "boykot": true
+      "boykot": true,
+      "neden": "Hükümet yanlısı."
     },
     {
       "marka": "İstinye Park",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "İçim",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Şok",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     },
     {
       "marka": "Şok Market",
-      "boykot": true
+      "boykot": true,
+      "neden": "Yıldız Holdinge aittir."
     },
     {
       "marka": "Şölen",
-      "boykot": true
+      "boykot": true,
+      "neden": ""
     }
   ]
 }
