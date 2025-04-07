@@ -138,7 +138,13 @@
       try {
         const response = await fetch("boykot.json");
         const data = await response.json();
-        const bulundu = data.boykotListesi.find(item => item.marka.toLowerCase().trim() === girilen);
+        
+        function normalize(metin) {
+          return metin.toLowerCase().replace(/[^a-z0-9ğüşöçıİĞÜŞÖÇ]/gi, '').replace(/\s+/g, '');
+        }
+        const girilenNorm = normalize(girilen);
+        const bulundu = data.boykotListesi.find(item => normalize(item.marka) === girilenNorm);
+    
         boykotMarkalar = data.boykotListesi.map(item => item.marka.toLowerCase().trim());
 
         if (bulundu && bulundu.boykot === true) {
