@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>#BoykotListesi</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>#BoykotListesi</title>
+<style>
     body {
       background-color: #1e1e1e;
       color: #f1f1f1;
@@ -62,61 +63,54 @@
   </style>
 </head>
 <body>
-  <h1>#BoykotListesi</h1>
-
-  <div class="alt-kutu">
-    <h2>📣 Ziyaretçi Yorumları</h2>
-    <form id="yorumFormu">
-      <textarea id="yeniYorum" placeholder="Yorumunuzu yazın..." required></textarea>
-      <button type="submit">Yorum Gönder</button>
-    </form>
-    <ul id="yorumListesi"></ul>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <h2>Marka Sorgula</h2>
-      <input type="text" id="markaAdi" placeholder="Marka adını yazın">
-      <button onclick="sorgula()">Sorgula</button>
-      <div id="sonuc"></div>
-    </div>
-
-    <div class="card">
-      <h2>Boykot Marka Öner</h2>
-      <input type="text" id="onerilenMarka" placeholder="Marka adı">
-      <button onclick="markaOner()">Marka Öner</button>
-      <div id="onayMesaji"></div>
-    </div>
-
-    <div class="card">
-      <h2>Görüşünü Paylaş</h2>
-      <textarea id="gorusMetni" placeholder="Bu site hakkında görüşünüz..."></textarea>
-      <button onclick="gorusGonder()">Gönder</button>
-      <div id="gorusMesaji"></div>
-    </div>
-
-    <div class="card">
-      <h2>Alternatif Marka Öner</h2>
-      <input type="text" id="boykotMarka" placeholder="Boykot edilen marka">
-      <input type="text" id="alternatifMarka" placeholder="Önerdiğiniz alternatif">
-      <button onclick="alternatifOner()">Alternatif Öner</button>
-      <div id="alternatifMesaji"></div>
-    </div>
-  </div>
-
-  <div class="alt-kutu">
-    <h2>📋 Tüm Boykot Edilen Markalar</h2>
-    <table id="boykotListesiTablo">
-      <thead>
-        <tr><th>Marka</th><th>Durum</th><th>Boykot Nedeni</th></tr>
-      </thead>
-      <tbody id="boykotListesiBody">
-        <tr><td colspan="3">Yükleniyor...</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <script>
+<h1>#BoykotListesi</h1>
+<div class="alt-kutu">
+<h2>📣 Ziyaretçi Yorumları</h2>
+<form id="yorumFormu">
+<textarea id="yeniYorum" placeholder="Yorumunuzu yazın..." required=""></textarea>
+<button type="submit">Yorum Gönder</button>
+</form>
+<ul id="yorumListesi"></ul>
+</div>
+<div class="grid">
+<div class="card">
+<h2>Marka Sorgula</h2>
+<input id="markaAdi" placeholder="Marka adını yazın" type="text"/>
+<button onclick="sorgula()">Sorgula</button>
+<div id="sonuc"></div>
+</div>
+<div class="card">
+<h2>Boykot Marka Öner</h2>
+<input id="onerilenMarka" placeholder="Marka adı" type="text"/>
+<button onclick="markaOner()">Marka Öner</button>
+<div id="onayMesaji"></div>
+</div>
+<div class="card">
+<h2>Görüşünü Paylaş</h2>
+<textarea id="gorusMetni" placeholder="Bu site hakkında görüşünüz..."></textarea>
+<button onclick="gorusGonder()">Gönder</button>
+<div id="gorusMesaji"></div>
+</div>
+<div class="card">
+<h2>Alternatif Marka Öner</h2>
+<input id="boykotMarka" placeholder="Boykot edilen marka" type="text"/>
+<input id="alternatifMarka" placeholder="Önerdiğiniz alternatif" type="text"/>
+<button onclick="alternatifOner()">Alternatif Öner</button>
+<div id="alternatifMesaji"></div>
+</div>
+</div>
+<div class="alt-kutu">
+<h2>📋 Tüm Boykot Edilen Markalar</h2>
+<table id="boykotListesiTablo">
+<thead>
+<tr><th>Marka</th><th>Durum</th><th>Boykot Nedeni</th></tr>
+</thead>
+<tbody id="boykotListesiBody">
+<tr><td colspan="3">Yükleniyor...</td></tr>
+</tbody>
+</table>
+</div>
+<script>
     let alternatifler = [];
     let boykotMarkalar = [];
 
