@@ -182,10 +182,15 @@
         const satirlar = text.trim().split("\n");
         const liste = document.getElementById("yorumListesi");
         liste.innerHTML = "";
-        satirlar.reverse().forEach(yorum => {
-          const li = document.createElement("li");
-          li.textContent = `“${yorum}”`;
-          liste.appendChild(li);
+        satirlar.reverse().forEach(satir => {
+          const hucreler = satir.split(",");
+          const yorum = hucreler[0];
+          const onay = hucreler[1]?.toLowerCase().trim();
+          if (onay === "evet") {
+            const li = document.createElement("li");
+            li.textContent = `“${yorum}”`;
+            liste.appendChild(li);
+          }
         });
       } catch (e) {
         console.error("Yorumlar alınamadı", e);
